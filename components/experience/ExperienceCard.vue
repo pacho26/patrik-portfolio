@@ -44,7 +44,7 @@ const companyLogoAlt = computed(() => `${props.job.company} logo`)
         </li>
       </ul>
 
-      <ul></ul>
+      <TechList :items="job.technologies" class="mt-4" />
     </div>
   </div>
 </template>

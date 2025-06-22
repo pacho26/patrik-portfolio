@@ -25,7 +25,7 @@ const imgAlt = computed(() => `${props.project.title} image`)
       <div>
         <MyHeading :level="4" as="h2" class="sm:max-w-[90%]">{{ project.title }}</MyHeading>
         <p class="mt-4 text-grey-300">{{ project.description }}</p>
-        <TechList :items="project.technologies" />
+        <TechList :items="project.technologies" class="mt-8" />
       </div>
       <p class="absolute right-0 top-0 text-grey-400">{{ project.year }}</p>
     </div>
