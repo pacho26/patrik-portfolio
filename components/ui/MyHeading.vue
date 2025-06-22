@@ -25,10 +25,10 @@ const textSizeClass = computed(() => {
     case 4:
       return 'text-2xl md:text-4xl'
     case 5:
-      return 'text-xl md:text-3xl'
+      return 'text-lg md:text-2xl'
     case 6:
     default:
-      return 'text-lg md:text-2xl'
+      return 'text-md md:text-lg'
   }
 })
 </script>

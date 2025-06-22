@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+// TODO: Extract this to a separate file
 const projects = [
   {
     title: 'Project One',
@@ -23,7 +24,6 @@ const projects = [
 <template>
   <div>
     <MyHeading :level="1" class="font-display">Projects</MyHeading>
-
     <div class="mt-16 flex flex-col gap-8">
       <ProjectCard v-for="project in projects" :key="project.slug" :project />
     </div>

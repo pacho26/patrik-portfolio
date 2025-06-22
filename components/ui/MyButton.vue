@@ -43,21 +43,23 @@ const variantClass = computed(() => {
 </script>
 
 <template>
-  <NuxtLink
-    v-if="to"
-    :to="to"
-    class="border-1 border-mint-500 rounded cursor-pointer transition-all font-bold tracking-widest"
-    :class="[sizeClass, variantClass, buttonClass]"
-  >
-    <slot />
-  </NuxtLink>
+  <div>
+    <NuxtLink
+      v-if="to"
+      :to="to"
+      class="border-1 border-mint-500 rounded cursor-pointer transition-all font-bold tracking-widest"
+      :class="[sizeClass, variantClass, buttonClass]"
+    >
+      <slot />
+    </NuxtLink>
 
-  <button
-    v-else
-    type="button"
-    class="border-1 border-mint-500 rounded cursor-pointer transition-all font-bold tracking widest"
-    :class="[sizeClass, variantClass, buttonClass]"
-  >
-    <slot />
-  </button>
+    <button
+      v-else
+      type="button"
+      class="border-1 border-mint-500 rounded cursor-pointer transition-all font-bold tracking-widest"
+      :class="[sizeClass, variantClass, buttonClass]"
+    >
+      <slot />
+    </button>
+  </div>
 </template>

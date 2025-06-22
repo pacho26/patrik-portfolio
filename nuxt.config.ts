@@ -16,4 +16,7 @@ export default defineNuxtConfig({
     ],
   },
   components: ['~/components', { path: '~/components/ui', pathPrefix: false }],
+  image: {
+    domains: ['i.ibb.co'],
+  },
 })

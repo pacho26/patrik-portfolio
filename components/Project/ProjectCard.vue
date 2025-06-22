@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-type ProjectCardBasic = {
+type ProjectCard = {
   title: string
   description: string
   technologies: string[]
@@ -9,7 +9,7 @@ type ProjectCardBasic = {
 }
 
 const props = defineProps<{
-  project: ProjectCardBasic
+  project: ProjectCard
 }>()
 
 const imgAlt = computed(() => `${props.project.title} image`)
@@ -25,10 +25,7 @@ const imgAlt = computed(() => `${props.project.title} image`)
       <div>
         <MyHeading :level="4" as="h2" class="sm:max-w-[90%]">{{ project.title }}</MyHeading>
         <p class="mt-4 text-grey-300">{{ project.description }}</p>
-
-        <ul class="mt-8 flex gap-x-2 gap-y-2 flex-wrap">
-          <ProjectCardTech v-for="(tech, index) in project.technologies" :key="index" :label="tech" />
-        </ul>
+        <TechList :items="project.technologies" />
       </div>
       <p class="absolute right-0 top-0 text-grey-400">{{ project.year }}</p>
     </div>
