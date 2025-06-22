@@ -3,5 +3,7 @@
 </script>
 
 <template>
-  <div>Experience page</div>
+  <div>
+    <MyHeading :level="1" class="font-display">Experience</MyHeading>
+  </div>
 </template>
