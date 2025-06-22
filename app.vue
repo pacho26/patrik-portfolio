@@ -8,7 +8,7 @@ const updatePosition = (e: MouseEvent) => {
 }
 
 const gradientStyle = computed(() => ({
-  background: `radial-gradient(600px at ${mouseX.value}px ${mouseY.value}px, rgba(29, 78, 216, 0.15), transparent 80%)`,
+  background: `radial-gradient(500px at ${mouseX.value}px ${mouseY.value}px, rgba(29, 78, 216, 0.15), transparent 80%)`,
 }))
 
 onMounted(() => {

@@ -28,5 +28,4 @@ const projects = [
       <ProjectCard v-for="project in projects" :key="project.slug" :project />
     </div>
   </div>
-  <p></p>
 </template>

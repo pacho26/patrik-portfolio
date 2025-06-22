@@ -1,7 +1,8 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div>
+  <div class="flex items-center justify-between">
+    <MyLink to="/">Home</MyLink>
     <nav class="flex justify-end items-center gap-8">
       <MyLink to="/experience">Experience</MyLink>
       <MyLink to="/projects">Projects</MyLink>
