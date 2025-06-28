@@ -5,7 +5,7 @@ export const projectCardItems = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     year: 2023,
     technologies: ['Vue', 'Nuxt', 'TypeScript', 'Tailwind CSS'],
-    imageSrc: 'https://i.ibb.co/B5nBpvR2/kalen-emsley-Bkci-8qcdv-Q-unsplash-1.jpg',
+    imgSrc: 'portfolio-images/akordia-song-preview.png',
     slug: 'project-one',
   },
   {
@@ -13,7 +13,7 @@ export const projectCardItems = [
     description: 'This is a description of project two.',
     year: 2022,
     technologies: ['React', 'Next.js', 'JavaScript'],
-    imageSrc: 'https://i.ibb.co/LqMNvYK/pietro-de-grandi-T7-K4a-EPo-GGk-unsplash.jpg',
+    imgSrc: 'portfolio-images/akordia-song-preview.png',
     slug: 'project-two',
   },
 ]
@@ -22,7 +22,7 @@ export const experienceList = [
   {
     company: {
       name: 'Four of Them LLC',
-      logo: 'https://i.ibb.co/tM5PmJKT/4ot-logo.png',
+      logo: 'portfolio-images/logos/4ot-logo.png',
       url: 'https://4ofthem.eu/',
     },
     role: 'Frontend Engineer',
@@ -39,7 +39,7 @@ export const experienceList = [
   {
     company: {
       name: 'Three of them Ltd.',
-      logo: 'https://i.ibb.co/jvk8X4qL/Group-1.png',
+      logo: 'portfolio-images/logos/3ot-logo.png?updatedAt=1751123146841',
       url: 'https://www.3ofthem.eu/',
     },
     role: 'Junior Frontend Developer',

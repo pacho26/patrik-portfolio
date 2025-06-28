@@ -4,7 +4,7 @@ type ProjectCard = {
   description: string
   technologies: string[]
   year: number
-  imageSrc: string
+  imgSrc: string
   slug: string
 }
 
@@ -21,7 +21,12 @@ const imgAlt = computed(() => `${props.project.title} image`)
     class="block relative cursor-pointer transition-all grayscale-[0.7] hover:grayscale-0 hover:scale-101 hover:z-12 focus:grayscale-0 focus:scale-101 focus:z-12"
   >
     <div class="flex gap-8 relative">
-      <NuxtImg :src="project.imageSrc" :alt="imgAlt" width="500" class="max-w-[500px]" />
+      <NuxtImg
+        :src="project.imgSrc"
+        :alt="imgAlt"
+        width="500"
+        class="max-w-[500px]"
+      />
       <div>
         <MyHeading :level="4" as="h2" class="sm:max-w-[90%]">{{ project.title }}</MyHeading>
         <p class="mt-4 text-grey-300">{{ project.description }}</p>

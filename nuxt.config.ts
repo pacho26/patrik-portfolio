@@ -17,6 +17,9 @@ export default defineNuxtConfig({
   },
   components: ['~/components', { path: '~/components/ui', pathPrefix: false }],
   image: {
-    domains: ['i.ibb.co'],
+    provider: 'imagekit',
+    imagekit: {
+      baseURL: 'https://ik.imagekit.io/pa3k/',
+    },
   },
 })
