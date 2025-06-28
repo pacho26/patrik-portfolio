@@ -1,10 +1,11 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import PsLogoSvg from '@/assets/img/ps-logo.svg'
+</script>
 
 <template>
   <div class="flex items-center justify-between">
-    <MyLink to="/" class="hidden lg:block">Home</MyLink>
-    <MyLink to="/" class="block lg:hidden" aria-label="Home">
-      <FontAwesome :icon="['fas', 'house']" />
+    <MyLink to="/" no-hover-underline aria-label="Home">
+      <NuxtImg width="36" :src="PsLogoSvg" alt="Home" />
     </MyLink>
     <nav class="flex justify-end items-center gap-8">
       <MyLink to="/experience">Experience</MyLink>

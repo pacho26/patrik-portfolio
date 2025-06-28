@@ -40,7 +40,7 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-@import url('./assets/css/stars.css');
+@import url('@/assets/css/stars.css');
 
 .fade-enter-active,
 .fade-leave-active {
