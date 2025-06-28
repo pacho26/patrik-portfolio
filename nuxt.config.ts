@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/image', '@nuxt/icon', '@nuxt/fonts'],
+  modules: ['@nuxt/image', '@nuxt/icon', '@nuxt/fonts', '@vesp/nuxt-fontawesome'],
   css: ['~/assets/css/main.css'],
   vite: {
     plugins: [tailwindcss()],
@@ -20,6 +20,11 @@ export default defineNuxtConfig({
     provider: 'imagekit',
     imagekit: {
       baseURL: 'https://ik.imagekit.io/pa3k/',
+    },
+  },
+  fontawesome: {
+    icons: {
+      solid: ['house'],
     },
   },
 })

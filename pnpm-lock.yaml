@@ -20,6 +20,9 @@ importers:
       '@tailwindcss/vite':
         specifier: ^4.1.10
         version: 4.1.10(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.1)(yaml@2.8.0))
+      '@vesp/nuxt-fontawesome':
+        specifier: 1.2.1
+        version: 1.2.1(magicast@0.3.5)
       nuxt:
         specifier: ^3.17.5
         version: 3.17.5(@parcel/watcher@2.5.1)(@types/node@24.0.3)(db0@0.3.2)(ioredis@5.6.1)(lightningcss@1.30.1)(magicast@0.3.5)(rollup@4.44.0)(terser@5.43.1)(typescript@5.8.3)(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.1)(yaml@2.8.0))(yaml@2.8.0)
@@ -35,6 +38,16 @@ importers:
       vue-router:
         specifier: ^4.5.1
         version: 4.5.1(vue@3.5.17(typescript@5.8.3))
+    devDependencies:
+      '@fortawesome/free-brands-svg-icons':
+        specifier: ^6.7.2
+        version: 6.7.2
+      '@fortawesome/free-regular-svg-icons':
+        specifier: ^6.7.2
+        version: 6.7.2
+      '@fortawesome/free-solid-svg-icons':
+        specifier: ^6.7.2
+        version: 6.7.2
 
 packages:
 
@@ -347,6 +360,26 @@ packages:
 
   '@fastify/busboy@3.1.1':
     resolution: {integrity: sha512-5DGmA8FTdB2XbDeEwc/5ZXBl6UbBAyBOOLlPuBnZ/N1SwdH9Ii+cOX3tBROlDgcTXxjOYnLMVoKk9+FXAw0CJw==}
+
+  '@fortawesome/fontawesome-common-types@6.7.2':
+    resolution: {integrity: sha512-Zs+YeHUC5fkt7Mg1l6XTniei3k4bwG/yo3iFUtZWd/pMx9g3fdvkSK9E0FOC+++phXOka78uJcYb8JaFkW52Xg==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/fontawesome-svg-core@6.7.2':
+    resolution: {integrity: sha512-yxtOBWDrdi5DD5o1pmVdq3WMCvnobT0LU6R8RyyVXPvFRd2o79/0NCuQoCjNTeZz9EzA9xS3JxNWfv54RIHFEA==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/free-brands-svg-icons@6.7.2':
+    resolution: {integrity: sha512-zu0evbcRTgjKfrr77/2XX+bU+kuGfjm0LbajJHVIgBWNIDzrhpRxiCPNT8DW5AdmSsq7Mcf9D1bH0aSeSUSM+Q==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/free-regular-svg-icons@6.7.2':
+    resolution: {integrity: sha512-7Z/ur0gvCMW8G93dXIQOkQqHo2M5HLhYrRVC0//fakJXxcF1VmMPsxnG6Ee8qEylA8b8Q3peQXWMNZ62lYF28g==}
+    engines: {node: '>=6'}
+
+  '@fortawesome/free-solid-svg-icons@6.7.2':
+    resolution: {integrity: sha512-GsBrnOzU8uj0LECDfD5zomZJIjrPhIlWU82AHwa2s40FKH+kcxQaBvBo3Z4TxyZHIyX8XTDxsyA33/Vx9eFuQA==}
+    engines: {node: '>=6'}
 
   '@iconify/collections@1.0.561':
     resolution: {integrity: sha512-Bn3YLaXwNwVpVUk6YfxOc1I69r7pAV7GsDtkknXAa0Fk4vlh3YxwQU5J8N8h++tRmw702IVjQm6csyAyFZuADQ==}
@@ -1043,6 +1076,9 @@ packages:
     resolution: {integrity: sha512-6lLqMNX3TuycBPABycx7A9F1bHQR7kiQln6abjFbPrf5C/05qHM9M5E4PeTE59c7z8g6vHnx1Ioihb2AQl7BTA==}
     engines: {node: '>=18'}
     hasBin: true
+
+  '@vesp/nuxt-fontawesome@1.2.1':
+    resolution: {integrity: sha512-W7gaCQ8szFmOsMwBcxq22vyAV7wARQ8TK5wsd1we8Gt3KPFVQHj9ZYi738b4ePoeFxYGBEndh/uMLY6sIc+9HQ==}
 
   '@vitejs/plugin-vue-jsx@4.2.0':
     resolution: {integrity: sha512-DSTrmrdLp+0LDNF77fqrKfx7X0ErRbOcUAgJL/HbSesqQwoUvUQ4uYQqaex+rovqgGcoPqVk+AwUh3v9CuiYIw==}
@@ -4157,6 +4193,24 @@ snapshots:
 
   '@fastify/busboy@3.1.1': {}
 
+  '@fortawesome/fontawesome-common-types@6.7.2': {}
+
+  '@fortawesome/fontawesome-svg-core@6.7.2':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.7.2
+
+  '@fortawesome/free-brands-svg-icons@6.7.2':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.7.2
+
+  '@fortawesome/free-regular-svg-icons@6.7.2':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.7.2
+
+  '@fortawesome/free-solid-svg-icons@6.7.2':
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.7.2
+
   '@iconify/collections@1.0.561':
     dependencies:
       '@iconify/types': 2.0.0
@@ -5077,6 +5131,13 @@ snapshots:
       - encoding
       - rollup
       - supports-color
+
+  '@vesp/nuxt-fontawesome@1.2.1(magicast@0.3.5)':
+    dependencies:
+      '@fortawesome/fontawesome-svg-core': 6.7.2
+      '@nuxt/kit': 3.17.5(magicast@0.3.5)
+    transitivePeerDependencies:
+      - magicast
 
   '@vitejs/plugin-vue-jsx@4.2.0(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.1)(yaml@2.8.0))(vue@3.5.17(typescript@5.8.3))':
     dependencies:

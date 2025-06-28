@@ -1,9 +1,9 @@
 <script lang="ts" setup></script>
 
 <template>
-  <div class="max-w-[1024px] m-auto pt-8 px-6 pb-16">
+  <div class="max-w-[1024px] m-auto pt-6 px-6 pb-16 md:pt-8">
     <Header />
-    <main class="mt-24">
+    <main class="mt-12 md:mt-20">
       <slot />
     </main>
   </div>
