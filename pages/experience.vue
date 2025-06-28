@@ -5,6 +5,6 @@
 <template>
   <div>
     <MyHeading :level="1" class="font-display">Experience</MyHeading>
-    <ExperienceList class="mt-16" />
+    <ExperienceList class="mt-8 md:mt-16" />
   </div>
 </template>
