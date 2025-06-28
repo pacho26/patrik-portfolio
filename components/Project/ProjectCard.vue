@@ -28,7 +28,7 @@ const imgAlt = computed(() => `${props.project.title} image`)
         class="max-w-100vw lg:max-w-[500px]"
       />
       <div class="relative mx-4 mb-4 lg:w-full lg:m-0">
-        <MyHeading :level="4" as="h2" class="max-w-[75%] md:max-w-[85%]">{{ project.title }}</MyHeading>
+        <MyHeading :level="4" as="h2" class="font-medium max-w-[75%] md:max-w-[85%]">{{ project.title }}</MyHeading>
         <p class="mt-2 text-grey-300 text-sm md:mt-4 md:text-base">{{ project.description }}</p>
         <TechList :items="project.technologies" class="mt-4 lg:mt-6" />
         <p class="absolute right-0 top-1 text-grey-400 md:hidden">{{ project.year }}</p>

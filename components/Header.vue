@@ -3,7 +3,7 @@
 <template>
   <div class="flex items-center justify-between">
     <MyLink to="/" class="hidden lg:block">Home</MyLink>
-    <MyLink to="/" class="block lg:hidden">
+    <MyLink to="/" class="block lg:hidden" aria-label="Home">
       <FontAwesome :icon="['fas', 'house']" />
     </MyLink>
     <nav class="flex justify-end items-center gap-8">

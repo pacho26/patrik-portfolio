@@ -34,7 +34,7 @@ const textSizeClass = computed(() => {
 </script>
 
 <template>
-  <component :is="as" class="font-display font-medium" :class="textSizeClass">
+  <component :is="as" class="font-display text-white" :class="textSizeClass">
     <slot>{{ label }}</slot>
   </component>
 </template>

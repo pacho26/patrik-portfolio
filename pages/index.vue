@@ -1,4 +1,8 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+useHead({
+  title: 'Patrik - Portfolio',
+})
+</script>
 
 <template>
   <div>Homepage</div>
