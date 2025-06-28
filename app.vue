@@ -21,20 +21,27 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="relative bg-dark min-h-screen text-grey-50 overflow-hidden">
+  <div class="relative min-h-screen text-grey-50 overflow-hidden main-wrapper">
     <div class="pointer-events-none fixed inset-0 z-10" :style="gradientStyle" aria-hidden="true" />
 
-    <div class="relative z-20">
-      <NuxtLayout>
-        <Transition name="fade" mode="out-in">
-          <NuxtPage />
-        </Transition>
-      </NuxtLayout>
-    </div>
+    <section class="stars-wrapper">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+      <div class="relative z-20"></div>
+    </section>
+
+    <NuxtLayout>
+      <Transition name="fade" mode="out-in">
+        <NuxtPage />
+      </Transition>
+    </NuxtLayout>
   </div>
 </template>
 
 <style scoped>
+@import url('./assets/css/stars.css');
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.15s ease;
@@ -43,5 +50,9 @@ onUnmounted(() => {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.main-wrapper {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
 }
 </style>
