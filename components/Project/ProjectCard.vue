@@ -20,7 +20,7 @@ const imgAlt = computed(() => `${props.project.title} image`)
     :to="{ name: 'projects-slug', params: { slug: project.slug } }"
     class="block relative overflow-hidden border-1 border-grey-800 rounded cursor-pointer transition-all md:grayscale-[0.7] hover:grayscale-0 md:hover:scale-101 hover:z-12 focus:grayscale-0 md:focus:scale-101 focus:z-12 md:border-none"
   >
-    <div class="flex flex-col gap-4 relative md:flex-row lg:gap-8">
+    <div class="flex flex-col gap-4 relative bg-dark md:bg-transparent md:flex-row lg:gap-8">
       <NuxtImg
         :src="project.imgSrc"
         :alt="imgAlt"
