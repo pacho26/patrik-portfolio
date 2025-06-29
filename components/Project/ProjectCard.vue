@@ -1,15 +1,8 @@
 <script lang="ts" setup>
-type ProjectCard = {
-  title: string
-  description: string
-  technologies: string[]
-  year: number
-  imgSrc: string
-  slug: string
-}
+import type { ProjectModel } from '~/assets/ts';
 
 const props = defineProps<{
-  project: ProjectCard
+  project: ProjectModel
 }>()
 
 const imgAlt = computed(() => `${props.project.title} image`)

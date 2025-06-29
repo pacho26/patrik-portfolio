@@ -1,4 +1,13 @@
-export const projectCardItems = [
+export type ProjectModel = {
+  title: string
+  description: string
+  year: number
+  technologies: string[]
+  imgSrc: string
+  slug: string
+}
+
+export const projectCardItems: ProjectModel[] = [
   {
     title: 'Project One',
     description:
@@ -18,7 +27,26 @@ export const projectCardItems = [
   },
 ]
 
-export const experienceList = [
+export const getProjectBySlug = (slug: string) => {
+  return projectCardItems.find(project => project.slug === slug)
+}
+
+type Company = {
+  name: string
+  logo: string
+  url: string
+}
+
+export type ExperienceModel = {
+  company: Company
+  role: string
+  location: string
+  descriptionList: string[]
+  technologies: string[]
+  period: string
+}
+
+export const experienceList: ExperienceModel[] = [
   {
     company: {
       name: 'Four of Them LLC',

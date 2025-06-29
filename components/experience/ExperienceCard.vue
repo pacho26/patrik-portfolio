@@ -1,21 +1,8 @@
 <script lang="ts" setup>
-type Company = {
-  name: string
-  logo: string
-  url: string
-}
-
-type ExperienceCard = {
-  company: Company
-  role: string
-  location: string
-  descriptionList: string[]
-  technologies: string[]
-  period: string
-}
+import type { ExperienceModel } from '~/assets/ts'
 
 const props = defineProps<{
-  job: ExperienceCard
+  job: ExperienceModel
 }>()
 
 const companyLogoAlt = computed(() => `${props.job.company} logo`)
