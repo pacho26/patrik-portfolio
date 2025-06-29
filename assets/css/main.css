@@ -17,3 +17,7 @@
   --font-sans: "Inter", "sans-serif";
   --font-display: "Funnel Display", "sans-serif";
 }
+
+::selection {
+  background-color: #007595;
+}
