@@ -10,7 +10,7 @@ const companyLogoAlt = computed(() => `${props.job.company} logo`)
 
 <template>
   <div class="max-w-[800px] flex flex-col items-start gap-1 md:flex-row md:gap-12">
-    <p class="uppercase text-sm text-grey-500 text-nowrap md:leading-[32px]">{{ job.period }}</p>
+    <p class="uppercase text-sm text-grey-400 text-nowrap md:leading-[32px]">{{ job.period }}</p>
     <div>
       <MyHeading :level="4" as="h2" class="font-medium leading-[32px]">{{ job.role }}</MyHeading>
       <div class="mt-2 flex items-center gap-2">
