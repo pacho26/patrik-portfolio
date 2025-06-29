@@ -1,5 +1,5 @@
 export type ProjectModel = {
-  title: string
+  name: string
   description: string
   year: number
   technologies: string[]
@@ -7,9 +7,9 @@ export type ProjectModel = {
   slug: string
 }
 
-export const projectCardItems: ProjectModel[] = [
+export const projects: ProjectModel[] = [
   {
-    title: 'Project One',
+    name: 'Project One',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     year: 2023,
@@ -18,7 +18,7 @@ export const projectCardItems: ProjectModel[] = [
     slug: 'project-one',
   },
   {
-    title: 'Project Two',
+    name: 'Project Two',
     description: 'This is a description of project two.',
     year: 2022,
     technologies: ['React', 'Next.js', 'JavaScript'],
@@ -26,10 +26,6 @@ export const projectCardItems: ProjectModel[] = [
     slug: 'project-two',
   },
 ]
-
-export const getProjectBySlug = (slug: string) => {
-  return projectCardItems.find(project => project.slug === slug)
-}
 
 type Company = {
   name: string
@@ -46,7 +42,7 @@ export type ExperienceModel = {
   period: string
 }
 
-export const experienceList: ExperienceModel[] = [
+export const experiences: ExperienceModel[] = [
   {
     company: {
       name: 'Four of Them LLC',

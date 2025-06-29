@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 useHead({
-  title: 'Patrik - Portfolio',
+  title: 'Patrik | Portfolio',
 })
 </script>
 
