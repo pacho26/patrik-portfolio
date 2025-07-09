@@ -5,7 +5,7 @@ const props = defineProps<{
   job: ExperienceModel
 }>()
 
-const companyLogoAlt = computed(() => `${props.job.company} logo`)
+const companyLogoAlt = computed(() => `${props.job.company.name} logo`)
 </script>
 
 <template>

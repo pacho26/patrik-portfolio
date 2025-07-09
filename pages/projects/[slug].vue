@@ -18,7 +18,5 @@ useHead({
 </script>
 
 <template>
-  <div>
-    <MyHeading :level="1" class="font-display">Projects</MyHeading>
-  </div>
+  <ProjectDetails v-if="project" :project="project" />
 </template>

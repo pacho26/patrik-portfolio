@@ -16,19 +16,12 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
   fonts: {
-    // TODO: Remove unnecessary font weights
     families: [
       { name: 'Inter', provider: 'google', weights: ['400', '500', '700'] },
       { name: 'Funnel Display', provider: 'google', weights: ['400', '500', '700'] },
     ],
   },
   components: ['~/components', { path: '~/components/ui', pathPrefix: false }],
-  image: {
-    provider: 'imagekit',
-    imagekit: {
-      baseURL: 'https://ik.imagekit.io/pa3k/',
-    },
-  },
   fontawesome: {
     icons: {
       solid: ['house'],

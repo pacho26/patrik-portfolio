@@ -5,5 +5,6 @@ useHead({
 </script>
 
 <template>
+  <!-- TODO: Add my image of some kind? -->
   <div>Homepage</div>
 </template>

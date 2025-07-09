@@ -1,28 +1,98 @@
+export type IconType = 'github' | 'link'
+
+type LinkModel = {
+  label: string
+  url: string
+  icon?: IconType
+}
+
+type ImageModel = {
+  src: string
+  title: string
+  description?: string
+}
+
 export type ProjectModel = {
   name: string
-  description: string
+  shortDescription: string
+  longDescription: string
   year: number
   technologies: string[]
-  imgSrc: string
+  previewImg: string
+  images: ImageModel[]
   slug: string
+  links?: LinkModel[]
 }
 
 export const projects: ProjectModel[] = [
   {
-    name: 'Project One',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    name: 'Akordia',
+    shortDescription:
+      'A web platform built for musicians to share, review, and explore song chords collaboratively.',
+    longDescription:
+      'Akordia is a web platform built for musicians to share, review, and explore song chords collaboratively. Users can submit chord sheets, which go through a peer-voting system before being published. Powered by Vue, Express, and MongoDB, Akordia modernizes how musicians access and manage chords while connecting them through shared musical interests.',
     year: 2023,
-    technologies: ['Vue', 'Nuxt', 'TypeScript', 'Tailwind CSS'],
-    imgSrc: 'portfolio-images/akordia-song-preview.png',
+    technologies: ['Vue', 'TypeScript', 'UnoCSS', 'Express', 'MongoDB'],
+    previewImg: '/img/projects/akordia/preview.webp',
+    images: [
+      {
+        src: '/img/projects/akordia/preview.webp',
+        title: 'Song Chords Request For Rating',
+        description:
+          'Users randomly receive song chord requests from other users. They can then choose to approve, disapprove, or skip the requested song.',
+      },
+      {
+        src: '/img/projects/akordia/preview.webp',
+        title: 'Song Chords Request For Rating',
+        description:
+          'Users randomly receive song chord requests from other users. They can then choose to approve, disapprove, or skip the requested song.',
+      },
+      {
+        src: '/img/projects/akordia/preview.webp',
+        title: 'Song Chords Request For Rating',
+        description:
+          'Users randomly receive song chord requests from other users. They can then choose to approve, disapprove, or skip the requested song.',
+      },
+      {
+        src: '/img/projects/akordia/preview.webp',
+        title: 'Song Chords Request For Rating',
+        description:
+          'Users randomly receive song chord requests from other users. They can then choose to approve, disapprove, or skip the requested song.',
+      },
+    ],
     slug: 'project-one',
+    links: [
+      {
+        label: 'Live demo',
+        url: 'https://akordia.vercel.app/',
+        icon: 'link',
+      },
+      {
+        label: 'Frontend repository',
+        url: 'https://github.com/pacho26/akordia-frontend',
+        icon: 'github',
+      },
+      {
+        label: 'Backend repository',
+        url: 'https://github.com/pacho26/akordia-backend',
+        icon: 'github',
+      },
+    ],
   },
   {
     name: 'Project Two',
-    description: 'This is a description of project two.',
+    shortDescription: 'This is a description of project two.',
+    longDescription: 'This is a description of project two.',
     year: 2022,
     technologies: ['React', 'Next.js', 'JavaScript'],
-    imgSrc: 'portfolio-images/akordia-song-preview.png',
+    previewImg: '/img/projects/akordia/preview.webp',
+    images: [
+      {
+        src: '/img/projects/akordia/preview.webp',
+        title: 'Song chords',
+        description: 'Song Chords description',
+      },
+    ],
     slug: 'project-two',
   },
 ]
@@ -46,7 +116,7 @@ export const experiences: ExperienceModel[] = [
   {
     company: {
       name: 'Four of Them LLC',
-      logo: 'portfolio-images/logos/4ot-logo.png',
+      logo: '/img/logos/4ot-logo.png',
       url: 'https://4ofthem.eu/',
     },
     role: 'Frontend Engineer',
@@ -63,7 +133,7 @@ export const experiences: ExperienceModel[] = [
   {
     company: {
       name: 'Three of them Ltd.',
-      logo: 'portfolio-images/logos/3ot-logo.png?updatedAt=1751123146841',
+      logo: '/img/logos/3ot-logo.png',
       url: 'https://www.3ofthem.eu/',
     },
     role: 'Junior Frontend Developer',
