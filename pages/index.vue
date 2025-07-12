@@ -34,7 +34,7 @@ const rotation = {
       :class="{ group: !isTouchDevice }"
     >
       <div
-        class="relative w-full h-full rounded-full transition-transform duration-700 transform-3d border-3"
+        class="relative w-full h-full rounded-full transition-transform duration-700 transform-3d border-4"
         :class="{
           'rotate-y-180': isRotated,
           'group-hover:rotate-y-180': !isTouchDevice,
