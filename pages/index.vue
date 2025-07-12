@@ -1,8 +1,44 @@
+<script lang="ts" setup>
+const { isTouchDevice } = useTouchDevice()
+
+const isRotated = ref(false)
+
+const rotation = {
+  toggle() {
+    if (isTouchDevice.value) {
+      isRotated.value = !isRotated.value
+    }
+  },
+
+  onMouseEnter() {
+    if (!isTouchDevice.value) {
+      isRotated.value = true
+    }
+  },
+
+  onMouseLeave() {
+    if (!isTouchDevice.value) {
+      isRotated.value = false
+    }
+  },
+}
+</script>
+
 <template>
   <div class="flex flex-col items-center">
-    <div class="relative w-[200px] h-[200px] group cursor-pointer rounded-full perspective-1000">
+    <div
+      class="relative w-[200px] h-[200px] cursor-pointer rounded-full perspective-1000"
+      @click="rotation.toggle"
+      @mouseenter="rotation.onMouseEnter"
+      @mouseleave="rotation.onMouseLeave"
+      :class="{ group: !isTouchDevice }"
+    >
       <div
-        class="relative w-full h-full rounded-full transition-transform duration-700 transform-3d group-hover:rotate-y-180"
+        class="relative w-full h-full rounded-full transition-transform duration-700 transform-3d"
+        :class="{
+          'rotate-y-180': isRotated,
+          'group-hover:rotate-y-180': !isTouchDevice,
+        }"
       >
         <NuxtImg
           src="img/profile-illustration.png"
