@@ -31,7 +31,7 @@ export const projects: ProjectModel[] = [
       'A web platform built for musicians to share, review, and explore song chords collaboratively.',
     longDescription:
       'Akordia is a web platform built for musicians to share, review, and explore song chords collaboratively. Users can submit chord sheets, which go through a peer-voting system before being published. Powered by Vue, Express, and MongoDB, Akordia modernizes how musicians access and manage chords while connecting them through shared musical interests.',
-    year: 2023,
+    year: 2022,
     technologies: ['Vue', 'TypeScript', 'UnoCSS', 'Express', 'MongoDB'],
     previewImg: '/img/projects/akordia/preview.webp',
     images: [
@@ -60,7 +60,7 @@ export const projects: ProjectModel[] = [
           'Users randomly receive song chord requests from other users. They can then choose to approve, disapprove, or skip the requested song.',
       },
     ],
-    slug: 'project-one',
+    slug: 'akordia',
     links: [
       {
         label: 'Live demo',
@@ -80,11 +80,13 @@ export const projects: ProjectModel[] = [
     ],
   },
   {
-    name: 'Project Two',
-    shortDescription: 'This is a description of project two.',
-    longDescription: 'This is a description of project two.',
-    year: 2022,
-    technologies: ['React', 'Next.js', 'JavaScript'],
+    name: 'Alias',
+    shortDescription:
+      'A web app replica of a popular social game, enhanced with many new features.',
+    longDescription:
+      'A web app replica of a popular social game, enhanced with many new features. Available in Croatian and English. A personal summer side project.',
+    year: 2021,
+    technologies: ['Vue', 'Nuxt', 'SCSS'],
     previewImg: '/img/projects/akordia/preview.webp',
     images: [
       {
@@ -93,7 +95,19 @@ export const projects: ProjectModel[] = [
         description: 'Song Chords description',
       },
     ],
-    slug: 'project-two',
+    slug: 'alias',
+    links: [
+      {
+        label: 'Live demo',
+        url: 'https://alias-game.vercel.app/',
+        icon: 'link',
+      },
+      {
+        label: 'Repository',
+        url: 'https://github.com/pacho26/alias-game',
+        icon: 'github',
+      },
+    ],
   },
 ]
 
