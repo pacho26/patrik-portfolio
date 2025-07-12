@@ -34,7 +34,7 @@ const rotation = {
       :class="{ group: !isTouchDevice }"
     >
       <div
-        class="relative w-full h-full rounded-full transition-transform duration-700 transform-3d"
+        class="relative w-full h-full rounded-full transition-transform duration-700 transform-3d border-3"
         :class="{
           'rotate-y-180': isRotated,
           'group-hover:rotate-y-180': !isTouchDevice,
@@ -45,14 +45,14 @@ const rotation = {
           alt="Profile animated"
           width="192"
           height="192"
-          class="rounded-full absolute inset-0 backface-hidden"
+          class="rounded-full absolute w-full inset-0 backface-hidden"
         />
         <NuxtImg
           src="img/profile-real.jpg"
           alt="Profile real"
           width="192"
           height="192"
-          class="rounded-full absolute inset-0 backface-hidden rotate-y-180"
+          class="rounded-full absolute w-full inset-0 backface-hidden rotate-y-180"
         />
       </div>
     </div>
