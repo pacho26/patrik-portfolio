@@ -20,7 +20,7 @@ defineProps<{
       <MyHeading :level="4" as="h2" class="font-display">Links</MyHeading>
       <div class="mt-4 flex flex-col gap-2">
         <div class="flex items-center gap-3" v-for="link in project.links" :key="link.url">
-          <MyIcon :icon="link.icon" />
+          <Icon :name="`uil:${link.icon}`" size="20px" />
           <MyLink :to="link.url" new-tab>
             <p>{{ link.label }}</p>
           </MyLink>

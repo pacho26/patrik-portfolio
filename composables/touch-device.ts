@@ -9,7 +9,5 @@ export function useTouchDevice() {
     detectTouch()
   })
 
-  onUnmounted(() => {})
-
   return { isTouchDevice }
 }
