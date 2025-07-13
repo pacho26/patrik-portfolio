@@ -7,6 +7,13 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en',
       },
+      meta: [
+        {
+          name: 'description',
+          content:
+            'Patrik Slovic - Frontend developer specializing in Vue.js development with clean, maintainable code.',
+        },
+      ],
     },
   },
   devtools: { enabled: true },

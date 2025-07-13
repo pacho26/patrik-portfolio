@@ -13,7 +13,13 @@ if (projectIdParam) {
 }
 
 useHead({
-  title: `Patrik | Project: ${project.value?.name}`,
+  title: `${project.value?.name} | Patrik Slovic`,
+  meta: [
+    {
+      name: 'description',
+      content: `Details about ${project.value?.name} - a web development project by Patrik Slovic.`,
+    },
+  ],
 })
 </script>
 

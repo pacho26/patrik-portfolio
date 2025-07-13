@@ -2,7 +2,14 @@
 const { isTouchDevice } = useTouchDevice()
 
 useHead({
-  title: 'Patrik | Homepage',
+  title: 'Patrik Slovic | Frontend Developer',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Patrik Slovic - Frontend developer specializing in Vue.js. Clean, maintainable code with a passion for web development and music performance.',
+    },
+  ],
 })
 
 const isRotated = ref(false)

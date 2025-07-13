@@ -1,6 +1,13 @@
 <script lang="ts" setup>
 useHead({
-  title: 'Patrik | Experience',
+  title: 'Experience | Patrik Slovic',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'View my professional experience in web development, including roles as a frontend developer working with Vue.js and modern web technologies.',
+    },
+  ],
 })
 </script>
 
