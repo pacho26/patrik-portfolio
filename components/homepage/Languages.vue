@@ -36,7 +36,14 @@ const flagClass = 'flex flex-col items-center min-w-[48px]'
   <div class="flex flex-col gap-4">
     <div v-for="item in languageItems" :key="item.name" :class="sectionClass">
       <div :class="flagClass">
-        <NuxtImg :src="item.flag" width="32" class="h-4 object-cover" :alt="`${item.name} flag`" />
+        <NuxtImg
+          :src="item.flag"
+          width="32"
+          class="h-4 object-cover"
+          :alt="`${item.name} flag`"
+          sizes="32px"
+          loading="lazy"
+        />
         <p class="mt-1 text-xs leading-4">{{ item.name }}</p>
       </div>
       <p class="text-sm leading-4">{{ item.level }}</p>

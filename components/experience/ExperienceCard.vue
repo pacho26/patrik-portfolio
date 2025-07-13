@@ -14,7 +14,14 @@ const companyLogoAlt = computed(() => `${props.job.company.name} logo`)
     <div>
       <MyHeading :level="4" as="h2" class="font-medium leading-[32px]">{{ job.role }}</MyHeading>
       <div class="mt-2 flex items-center gap-2">
-        <NuxtImg :src="job.company.logo" :alt="companyLogoAlt" width="20" height="20" />
+        <NuxtImg
+          :src="job.company.logo"
+          :alt="companyLogoAlt"
+          width="20"
+          height="20"
+          sizes="20px"
+          loading="lazy"
+        />
         <MyLink
           v-if="job.company.url"
           :to="job.company.url"

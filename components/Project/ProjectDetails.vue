@@ -36,7 +36,14 @@ defineProps<{
           :key="image.src"
           class="relative rounded overflow-hidden"
         >
-          <NuxtImg :src="image.src" :alt="image.title" class="w-full" />
+          <NuxtImg
+            :src="image.src"
+            :alt="image.title"
+            class="w-full"
+            preset="project"
+            loading="lazy"
+            sizes="100vw lg:800px"
+          />
           <p class="absolute bottom-0 p-2 px-4 w-full text-sm bg-cyan-900/50 hidden sm:block">
             {{ image.description }}
           </p>

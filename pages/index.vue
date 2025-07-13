@@ -12,13 +12,13 @@ useHead({
     {
       rel: 'preload',
       as: 'image',
-      href: '/img/profile-illustration.webp',
+      href: '/img/profile-illustration.webp?w=192&h=192&f=webp&q=85',
       fetchpriority: 'high',
     },
     {
       rel: 'preload',
       as: 'image',
-      href: '/img/profile-real.webp',
+      href: '/img/profile-real.webp?w=192&h=192&f=webp&q=85',
       fetchpriority: 'high',
     },
   ],

@@ -22,6 +22,34 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  image: {
+    format: ['webp', 'avif'],
+    quality: 80,
+    screens: {
+      xs: 320,
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536,
+    },
+    presets: {
+      profile: {
+        modifiers: {
+          format: 'webp',
+          quality: 85,
+          width: 192,
+          height: 192,
+        },
+      },
+      project: {
+        modifiers: {
+          format: 'webp',
+          quality: 80,
+        },
+      },
+    },
+  },
   fonts: {
     families: [
       { name: 'Inter', provider: 'google', weights: ['400', '500', '700'], display: 'swap' },

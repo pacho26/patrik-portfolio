@@ -44,6 +44,8 @@ const rotation = {
         alt="Profile - animated"
         width="192"
         height="192"
+        sizes="200px"
+        preset="profile"
         class="rounded-full absolute w-full inset-0 backface-hidden"
         priority
         loading="eager"
@@ -54,6 +56,8 @@ const rotation = {
         alt="Profile - real life"
         width="192"
         height="192"
+        sizes="200px"
+        preset="profile"
         class="rounded-full absolute w-full inset-0 backface-hidden rotate-y-180"
         priority
         loading="eager"
