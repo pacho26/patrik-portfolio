@@ -40,7 +40,7 @@ const rotation = {
       }"
     >
       <NuxtImg
-        src="img/profile-illustration.png"
+        src="img/profile-illustration.webp"
         alt="Profile - animated"
         width="192"
         height="192"
@@ -50,7 +50,7 @@ const rotation = {
         fetchpriority="high"
       />
       <NuxtImg
-        src="img/profile-real.jpg"
+        src="img/profile-real.webp"
         alt="Profile - real life"
         width="192"
         height="192"
