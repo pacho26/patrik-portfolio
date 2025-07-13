@@ -62,9 +62,4 @@ export default defineNuxtConfig({
     ],
   },
   components: ['~/components', { path: '~/components/ui', pathPrefix: false }],
-  fontawesome: {
-    icons: {
-      solid: ['house'],
-    },
-  },
 })
