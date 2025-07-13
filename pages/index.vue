@@ -19,7 +19,7 @@ useHead({
       rel: 'preload',
       as: 'image',
       href: '/img/profile-real.webp?w=192&h=192&f=webp&q=85',
-      fetchpriority: 'high',
+      fetchpriority: 'low',
     },
   ],
 })

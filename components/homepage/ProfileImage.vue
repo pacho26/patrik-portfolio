@@ -59,9 +59,8 @@ const rotation = {
         sizes="200px"
         preset="profile"
         class="rounded-full absolute w-full inset-0 backface-hidden rotate-y-180"
-        priority
-        loading="eager"
-        fetchpriority="high"
+        loading="lazy"
+        fetchpriority="low"
       />
     </div>
   </div>
