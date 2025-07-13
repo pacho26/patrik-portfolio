@@ -14,6 +14,14 @@ export default defineNuxtConfig({
             'Patrik Slovic - Frontend developer specializing in Vue.js development with clean, maintainable code.',
         },
       ],
+      link: [
+        {
+          rel: 'preload',
+          href: '/css/stars.css',
+          as: 'style',
+          fetchpriority: 'low',
+        },
+      ],
     },
   },
   devtools: { enabled: true },
