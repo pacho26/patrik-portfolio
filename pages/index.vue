@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 const { isTouchDevice } = useTouchDevice()
 
+useHead({
+  title: 'Patrik | Homepage',
+})
+
 const isRotated = ref(false)
 
 const rotation = {
