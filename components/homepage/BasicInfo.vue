@@ -25,7 +25,9 @@ const sectionClass = 'flex items-center justify-between gap-4'
 <template>
   <div class="flex flex-col gap-4">
     <div v-for="item in infoItems" :key="item.text" :class="sectionClass">
-      <Icon :name="item.icon" size="24px" />
+      <div class="flex justify-center w-[48px]">
+        <Icon :name="item.icon" size="24px" />
+      </div>
       <p class="text-sm">{{ item.text }}</p>
     </div>
   </div>
