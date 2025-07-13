@@ -24,8 +24,13 @@ export default defineNuxtConfig({
   },
   fonts: {
     families: [
-      { name: 'Inter', provider: 'google', weights: ['400', '500', '700'] },
-      { name: 'Funnel Display', provider: 'google', weights: ['400', '500', '700'] },
+      { name: 'Inter', provider: 'google', weights: ['400', '500', '700'], display: 'swap' },
+      {
+        name: 'Funnel Display',
+        provider: 'google',
+        weights: ['400', '500', '700'],
+        display: 'swap',
+      },
     ],
   },
   components: ['~/components', { path: '~/components/ui', pathPrefix: false }],

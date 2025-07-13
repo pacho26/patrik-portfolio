@@ -21,3 +21,20 @@
 ::selection {
   background-color: #52E9FD4D;
 }
+
+/* Critical CSS for LCP optimization */
+.profile-image-container {
+  contain: layout style paint;
+  will-change: transform;
+}
+
+.profile-image {
+  contain: layout style paint;
+  will-change: transform;
+}
+
+/* Ensure text renders quickly */
+.lcp-text {
+  contain: layout style;
+  font-display: swap;
+}

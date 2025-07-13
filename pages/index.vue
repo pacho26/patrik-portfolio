@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-const { isTouchDevice } = useTouchDevice()
-
 useHead({
   title: 'Patrik Slovic | Frontend Developer',
   meta: [
@@ -10,71 +8,34 @@ useHead({
         'Patrik Slovic - Frontend developer specializing in Vue.js. Clean, maintainable code with a passion for web development and music performance.',
     },
   ],
+  link: [
+    {
+      rel: 'preload',
+      as: 'image',
+      href: '/img/profile-illustration.png',
+      fetchpriority: 'high',
+    },
+    {
+      rel: 'preload',
+      as: 'image',
+      href: '/img/profile-real.jpg',
+      fetchpriority: 'high',
+    },
+  ],
 })
-
-const isRotated = ref(false)
-
-const rotation = {
-  toggle() {
-    if (isTouchDevice.value) {
-      isRotated.value = !isRotated.value
-    }
-  },
-
-  onMouseEnter() {
-    if (!isTouchDevice.value) {
-      isRotated.value = true
-    }
-  },
-
-  onMouseLeave() {
-    if (!isTouchDevice.value) {
-      isRotated.value = false
-    }
-  },
-}
 </script>
 
 <template>
   <div>
     <div class="flex flex-col justify-between gap-8 sm:flex-row">
       <div class="flex flex-col items-center">
-        <div
-          class="relative w-[200px] h-[200px] cursor-pointer rounded-full perspective-1000"
-          @click="rotation.toggle"
-          @mouseenter="rotation.onMouseEnter"
-          @mouseleave="rotation.onMouseLeave"
-          :class="{ group: !isTouchDevice }"
-        >
-          <div
-            class="relative w-full h-full rounded-full transition-transform duration-700 transform-3d border-4"
-            :class="{
-              'rotate-y-180': isRotated,
-              'group-hover:rotate-y-180': !isTouchDevice,
-            }"
-          >
-            <NuxtImg
-              src="img/profile-illustration.png"
-              alt="Profile animated"
-              width="192"
-              height="192"
-              class="rounded-full absolute w-full inset-0 backface-hidden"
-            />
-            <NuxtImg
-              src="img/profile-real.jpg"
-              alt="Profile real"
-              width="192"
-              height="192"
-              class="rounded-full absolute w-full inset-0 backface-hidden rotate-y-180"
-            />
-          </div>
-        </div>
+        <HomepageProfileImage />
         <MyHeading as="h1" :level="3" class="mt-4 font-bold">Patrik Slovic</MyHeading>
         <MyHeading as="h2" :level="5" class="text-grey-100"
           >Frontend developer & Musician</MyHeading
         >
 
-        <p class="mt-4 max-w-[680px] text-center text-grey-200">
+        <p class="mt-4 max-w-[680px] text-center text-grey-200 lcp-text">
           I'm a web developer specializing in Vue with a passion for clean, maintainable code.
           Persistent and easygoing, I enjoy adding humor to the workplace and tackling challenges.
           Outside of tech, I've spent nearly a decade performing at events as a band musician.
