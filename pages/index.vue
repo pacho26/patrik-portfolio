@@ -59,9 +59,11 @@ const rotation = {
           </div>
         </div>
         <MyHeading as="h1" :level="3" class="mt-4 font-bold">Patrik Slovic</MyHeading>
-        <MyHeading as="h2" :level="5">Frontend developer & Musician</MyHeading>
+        <MyHeading as="h2" :level="5" class="text-grey-100"
+          >Frontend developer & Musician</MyHeading
+        >
 
-        <p class="mt-4 max-w-[680px] text-center">
+        <p class="mt-4 max-w-[680px] text-center text-grey-200">
           I'm a web developer specializing in Vue with a passion for clean, maintainable code.
           Persistent and easygoing, I enjoy adding humor to the workplace and tackling challenges.
           Outside of tech, I've spent nearly a decade performing at events as a band musician.

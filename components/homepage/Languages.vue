@@ -1,37 +1,45 @@
 <script lang="ts" setup>
+interface LanguageItem {
+  flag: string
+  name: string
+  level: string
+}
+
+const languageItems: LanguageItem[] = [
+  {
+    flag: '/img/flags/croatia.svg',
+    name: 'Croatian',
+    level: 'Native',
+  },
+  {
+    flag: '/img/flags/english-language.svg',
+    name: 'English',
+    level: 'Advanced',
+  },
+  {
+    flag: '/img/flags/germany.svg',
+    name: 'German',
+    level: 'Basic',
+  },
+  {
+    flag: '/img/flags/italy.svg',
+    name: 'Italian',
+    level: 'Basic',
+  },
+]
+
 const sectionClass = 'flex items-start justify-between gap-12'
 const flagClass = 'flex flex-col items-center min-w-[48px]'
 </script>
 
 <template>
   <div class="flex flex-col gap-4">
-    <div :class="sectionClass">
+    <div v-for="item in languageItems" :key="item.name" :class="sectionClass">
       <div :class="flagClass">
-        <NuxtImg src="/img/flags/croatia.svg" width="32" alt="Croatian" />
-        <p class="mt-1 text-xs leading-4">Croatian</p>
+        <NuxtImg :src="item.flag" width="32" class="h-4 object-cover" aria-hidden />
+        <p class="mt-1 text-xs leading-4">{{ item.name }}</p>
       </div>
-      <p class="text-sm leading-4">Native</p>
-    </div>
-    <div :class="sectionClass">
-      <div :class="flagClass">
-        <NuxtImg src="/img/flags/english-language.svg" width="32" alt="English" />
-        <p class="mt-1 text-xs leading-4">English</p>
-      </div>
-      <p class="text-sm leading-4">Advanced</p>
-    </div>
-    <div :class="sectionClass">
-      <div :class="flagClass">
-        <NuxtImg src="/img/flags/germany.svg" width="32" class="h-4 object-cover" alt="German" />
-        <p class="mt-1 text-xs leading-4">German</p>
-      </div>
-      <p class="text-sm leading-4">Basic</p>
-    </div>
-    <div :class="sectionClass">
-      <div :class="flagClass">
-        <NuxtImg src="/img/flags/italy.svg" width="32" class="h-4 object-cover" alt="Italian" />
-        <p class="mt-1 text-xs">Italian</p>
-      </div>
-      <p class="text-sm leading-4">Basic</p>
+      <p class="text-sm leading-4">{{ item.level }}</p>
     </div>
   </div>
 </template>

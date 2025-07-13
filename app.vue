@@ -25,7 +25,7 @@ onUnmounted(() => {
     <div
       class="pointer-events-none fixed inset-0 z-10 hidden md:block"
       :style="gradientStyle"
-      aria-hidden="true"
+      aria-hidden
     />
 
     <section class="stars-wrapper">
