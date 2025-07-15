@@ -28,7 +28,7 @@ const sectionClass = 'flex items-center justify-between gap-4'
       <div class="flex justify-center w-[48px]">
         <Icon :name="item.icon" size="24px" />
       </div>
-      <p class="text-sm">{{ item.text }}</p>
+      <p class="text-sm text-nowrap">{{ item.text }}</p>
     </div>
   </div>
 </template>
