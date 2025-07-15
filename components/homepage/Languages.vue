@@ -28,7 +28,7 @@ const languageItems: LanguageItem[] = [
   },
 ]
 
-const sectionClass = 'flex items-start justify-between gap-12'
+const sectionClass = 'flex items-center justify-between gap-12'
 const flagClass = 'flex flex-col items-center min-w-[48px]'
 </script>
 
