@@ -7,7 +7,7 @@ interface LanguageItem {
 
 const languageItems: LanguageItem[] = [
   {
-    flag: '/img/flags/croatia.svg',
+    flag: '/img/flags/croatia.webp',
     name: 'Croatian',
     level: 'Native',
   },
