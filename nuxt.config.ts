@@ -23,6 +23,7 @@ export default defineNuxtConfig({
         },
       ],
     },
+    pageTransition: { name: 'fade', mode: 'out-in' },
   },
   devtools: { enabled: true },
   modules: ['@nuxt/image', '@nuxt/icon', '@nuxt/fonts', '@vesp/nuxt-fontawesome'],

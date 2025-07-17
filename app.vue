@@ -36,10 +36,7 @@ onUnmounted(() => {
     </section>
 
     <NuxtLayout>
-      <!-- TODO: Solve Transition warning -->
-      <Transition name="fade" mode="out-in">
-        <NuxtPage />
-      </Transition>
+      <NuxtPage key="page" />
     </NuxtLayout>
   </div>
 </template>
