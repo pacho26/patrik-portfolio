@@ -35,7 +35,7 @@ const sectionClass = 'flex items-center gap-4'
     <div class="mt-4 flex flex-col gap-4">
       <div v-for="item in contactItems" :key="item.text" :class="sectionClass">
         <Icon :name="item.icon" size="24px" />
-        <MyLink :to="item.url" :new-tab="item.newTab" custom-class="text-xs">
+        <MyLink :to="item.url" :new-tab="item.newTab">
           {{ item.text }}
         </MyLink>
       </div>
