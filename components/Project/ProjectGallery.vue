@@ -36,15 +36,17 @@ const thumbnailsConfig = computed(() => ({
 <template>
   <div>
     <Carousel v-bind="galleryConfig" v-model="currentSlide">
-      <Slide v-for="image in images" :key="image.src" class="rounded overflow-hidden aspect-[16/9]">
-        <NuxtImg
-          :src="image.src"
-          sizes="100vw sm:50vw lg:976px"
-          quality="85"
-          :alt="image.title"
-          class="w-full h-full"
-          fetchpriority="high"
-        />
+      <Slide v-for="image in images" :key="image.src" class="rounded overflow-hidden">
+        <div class="aspect-[16/9] w-full">
+          <NuxtImg
+            :src="image.src"
+            sizes="100vw sm:50vw lg:976px"
+            quality="85"
+            :alt="image.title"
+            class="w-full h-full object-cover"
+            fetchpriority="high"
+          />
+        </div>
       </Slide>
     </Carousel>
 
@@ -65,7 +67,7 @@ const thumbnailsConfig = computed(() => ({
                 width="600"
                 height="400"
                 fetchpriority="low"
-                class="w-full h-full"
+                class="w-full h-full object-cover"
               />
             </div>
           </template>
@@ -94,15 +96,3 @@ const thumbnailsConfig = computed(() => ({
     </div>
   </div>
 </template>
-
-<style>
-.carousel {
-  --vc-nav-background: rgba(255, 255, 255, 0.7);
-  --vc-nav-border-radius: 100%;
-}
-
-.carousel__next--disabled,
-.carousel__prev--disabled {
-  display: none;
-}
-</style>

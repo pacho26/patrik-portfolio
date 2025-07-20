@@ -54,3 +54,14 @@ img {
 img[loading="lazy"] {
   aspect-ratio: attr(width / attr(height));
 }
+
+/* Critical carousel styles - inlined to prevent blocking */
+.carousel {
+  --vc-nav-background: rgba(255, 255, 255, 0.7);
+  --vc-nav-border-radius: 100%;
+}
+
+.carousel__next--disabled,
+.carousel__prev--disabled {
+  display: none;
+}
