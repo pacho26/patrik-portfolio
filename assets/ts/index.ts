@@ -109,6 +109,36 @@ export const projects: ProjectModel[] = [
       },
     ],
   },
+  {
+    name: 'Aimo',
+    shortDescription:
+      'Social media platform connecting ambitious individuals with accountability partners.',
+    longDescription:
+      'A social media platform for motivated individuals who desire self-improvement and need an accountability partner to help complete their tasks.',
+    year: 2021,
+    technologies: ['Vue', 'Tailwind CSS', 'Firebase'],
+    previewImg: '/img/projects/akordia/preview.webp',
+    images: [
+      {
+        src: '/img/projects/akordia/preview.webp',
+        title: 'Song chords',
+        description: 'Song Chords description',
+      },
+    ],
+    slug: 'aimo',
+    links: [
+      {
+        label: 'Live demo',
+        url: 'https://aimo.vercel.app',
+        icon: 'link',
+      },
+      {
+        label: 'Repository',
+        url: 'https://github.com/matijaoe/aimo',
+        icon: 'github',
+      },
+    ],
+  },
 ]
 
 type Company = {
@@ -142,7 +172,7 @@ export const experiences: ExperienceModel[] = [
       'Continuous code reviews, focusing on knowledge sharing, maintaining code quality, and supporting team members',
     ],
     technologies: ['JavaScript', 'Vue', 'Node.js'],
-    period: 'May 2023 — Present',
+    period: 'Oct 2022 — Present',
   },
   {
     company: {
