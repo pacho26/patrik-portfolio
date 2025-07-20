@@ -36,7 +36,7 @@ export const projects: ProjectModel[] = [
     previewImg: '/img/projects/akordia/preview.webp',
     images: [
       {
-        src: '/img/projects/akordia/preview.webp',
+        src: '/img/projects/akordia/akordia-homepage.webp',
         title: 'Song Chords Request For Rating',
         description:
           'Users randomly receive song chord requests from other users. They can then choose to approve, disapprove, or skip the requested song.',
@@ -48,7 +48,7 @@ export const projects: ProjectModel[] = [
           'Users randomly receive song chord requests from other users. They can then choose to approve, disapprove, or skip the requested song.',
       },
       {
-        src: '/img/projects/akordia/preview.webp',
+        src: '/img/projects/akordia/akordia-homepage.webp',
         title: 'Song Chords Request For Rating',
         description:
           'Users randomly receive song chord requests from other users. They can then choose to approve, disapprove, or skip the requested song.',

@@ -37,11 +37,11 @@ const thumbnailsConfig = computed(() => ({
   <Carousel v-bind="galleryConfig" v-model="currentSlide">
     <Slide v-for="image in images" :key="image.src" class="rounded overflow-hidden aspect-[16/9]">
       <NuxtImg
-        src="/img/projects/akordia/akordia-homepage.webp"
+        :src="image.src"
         sizes="100vw sm:50vw lg:976px"
         quality="85"
-        alt="Akordia homepage screenshot"
-        class="w-full h-full object-contain"
+        :alt="image.title"
+        class="w-full h-full"
         fetchpriority="high"
       />
     </Slide>
