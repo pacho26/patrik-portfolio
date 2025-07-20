@@ -29,26 +29,7 @@ defineProps<{
     </div>
 
     <div class="mt-8 sm:mt-12">
-      <MyHeading :level="4" as="h2" class="font-display">Gallery</MyHeading>
-      <div class="flex flex-col gap-4 mt-4">
-        <div
-          v-for="image in project.images"
-          :key="image.src"
-          class="relative rounded overflow-hidden"
-        >
-          <NuxtImg
-            :src="image.src"
-            :alt="image.title"
-            class="w-full"
-            preset="project"
-            loading="lazy"
-            sizes="100vw lg:800px"
-          />
-          <p class="absolute bottom-0 p-2 px-4 w-full text-sm bg-cyan-900/50 hidden sm:block">
-            {{ image.description }}
-          </p>
-        </div>
-      </div>
+      <ProjectGallery :images="project.images" />
     </div>
   </div>
 </template>

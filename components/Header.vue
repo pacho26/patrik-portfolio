@@ -10,6 +10,7 @@
         alt="Home"
         sizes="36px"
         loading="eager"
+        fetchpriority="high"
       />
     </MyLink>
     <nav class="flex justify-end items-center gap-8 text-white">

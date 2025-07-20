@@ -6,7 +6,7 @@ type LinkModel = {
   icon?: IconType
 }
 
-type ImageModel = {
+export type ImageModel = {
   src: string
   title: string
   description?: string

@@ -26,7 +26,7 @@ export default defineNuxtConfig({
     pageTransition: { name: 'fade', mode: 'out-in' },
   },
   devtools: { enabled: true },
-  modules: ['@nuxt/image', '@nuxt/icon', '@nuxt/fonts', '@vesp/nuxt-fontawesome'],
+  modules: ['@nuxt/image', '@nuxt/icon', '@nuxt/fonts', '@vesp/nuxt-fontawesome', 'vue3-carousel-nuxt'],
   css: ['~/assets/css/main.css'],
   vite: {
     plugins: [tailwindcss()],
