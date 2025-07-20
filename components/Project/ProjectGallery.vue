@@ -28,7 +28,7 @@ const galleryConfig = computed(() => ({
 const thumbnailsConfig = computed(() => ({
   height: !isMounted.value ? 160 : mdDown.value ? 80 : 160,
   itemsToShow: !isMounted.value ? 3 : mdDown.value ? 2 : 3,
-  touchDrag: false,
+  touchDrag: true,
   gap: 8,
 }))
 </script>
