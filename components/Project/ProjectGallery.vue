@@ -70,7 +70,7 @@ const thumbnailsConfig = computed(() => ({
     </Slide>
 
     <template #addons>
-      <Navigation class="opacity-30 hover:opacity-100 transition-all" />
+      <Navigation class="opacity-70 md:opacity-30 hover:opacity-100 transition-all" />
     </template>
   </Carousel>
 </template>
