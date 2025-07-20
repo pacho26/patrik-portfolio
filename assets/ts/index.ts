@@ -163,7 +163,7 @@ export const experiences: ExperienceModel[] = [
       logo: '/img/logos/4ot-logo.png',
       url: 'https://4ofthem.eu/',
     },
-    role: 'Frontend Engineer',
+    role: 'Frontend Developer',
     location: 'Zaprešić, Croatia',
     descriptionList: [
       'Developed an existing high-traffic e-commerce platform from scratch with the aim to modernize its stack and improve performance',
