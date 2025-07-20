@@ -31,7 +31,7 @@ const thumbnailsConfig = {
 
 <template>
   <Carousel v-bind="galleryConfig" v-model="currentSlide">
-    <Slide v-for="image in images" :key="image.src" class="rounded overflow-hidden">
+    <Slide v-for="image in images" :key="image.src" class="rounded overflow-hidden aspect-[16/9]">
       <NuxtImg
         src="/img/projects/akordia/akordia-homepage.webp"
         sizes="100vw sm:50vw lg:976px"
@@ -44,7 +44,7 @@ const thumbnailsConfig = {
   </Carousel>
 
   <Carousel v-bind="thumbnailsConfig" v-model="currentSlide" class="mt-2.5">
-    <Slide v-for="image in images" :key="image.src">
+    <Slide v-for="image in images" :key="image.src" class="rounded overflow-hidden">
       <template #default="{ currentIndex, isActive }">
         <div
           :class="[
@@ -56,6 +56,8 @@ const thumbnailsConfig = {
           <NuxtImg
             :src="image.src"
             :alt="image.title"
+            width="600"
+            height="400"
             fetchpriority="low"
             class="w-full h-full object-cover"
           />
