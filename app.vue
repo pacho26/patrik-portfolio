@@ -28,7 +28,7 @@ onUnmounted(() => {
       aria-hidden
     />
 
-    <section class="stars-wrapper">
+    <section class="stars-wrapper h-0">
       <div id="stars"></div>
       <div id="stars2"></div>
       <div id="stars3"></div>
