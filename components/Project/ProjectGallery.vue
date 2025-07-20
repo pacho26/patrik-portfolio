@@ -47,7 +47,7 @@ const thumbnailsConfig = computed(() => ({
     </Slide>
   </Carousel>
 
-  <Carousel v-bind="thumbnailsConfig" v-model="currentSlide" class="mt-2.5">
+  <Carousel v-bind="thumbnailsConfig" v-model="currentSlide" class="mt-2">
     <Slide v-for="image in images" :key="image.src" class="rounded overflow-hidden">
       <template #default="{ currentIndex, isActive }">
         <div
@@ -79,5 +79,10 @@ const thumbnailsConfig = computed(() => ({
 .carousel {
   --vc-nav-background: rgba(255, 255, 255, 0.7);
   --vc-nav-border-radius: 100%;
+}
+
+.carousel__next--disabled,
+.carousel__prev--disabled {
+  display: none;
 }
 </style>
