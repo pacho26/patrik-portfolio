@@ -48,7 +48,7 @@ const thumbnailsConfig = computed(() => ({
       </Slide>
     </Carousel>
 
-    <div class="h-[80px] md:h-[160px] mt-2">
+    <div class="h-[80px] md:h-[160px] mt-2.5">
       <Carousel v-if="isMounted" v-bind="thumbnailsConfig" v-model="currentSlide">
         <Slide v-for="image in images" :key="image.src" class="rounded overflow-hidden bg-dark">
           <template #default="{ currentIndex, isActive }">
@@ -65,7 +65,7 @@ const thumbnailsConfig = computed(() => ({
                 width="600"
                 height="400"
                 fetchpriority="low"
-                class="w-full h-full object-cover"
+                class="w-full h-full"
               />
             </div>
           </template>
