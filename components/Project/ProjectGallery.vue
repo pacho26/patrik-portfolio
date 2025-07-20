@@ -8,25 +8,29 @@ defineProps<{
 const { mdDown } = useBreakpoints()
 
 const currentSlide = ref(0)
-
 const slideTo = (nextSlide: number) => (currentSlide.value = nextSlide)
 
+const isMounted = ref(false)
+onMounted(() => {
+  isMounted.value = true
+})
+
 // TODO: Check config props once again
-const galleryConfig = {
+const galleryConfig = computed(() => ({
   itemsToShow: 1,
   wrapAround: true,
   slideEffect: 'fade',
   mouseDrag: false,
   touchDrag: false,
-}
+}))
 
 // TODO: Check config props once again
-const thumbnailsConfig = {
-  height: mdDown.value ? 80 : 160,
-  itemsToShow: mdDown.value ? 2 : 3,
+const thumbnailsConfig = computed(() => ({
+  height: !isMounted.value ? 160 : mdDown.value ? 80 : 160,
+  itemsToShow: !isMounted.value ? 3 : mdDown.value ? 2 : 3,
   touchDrag: false,
   gap: 8,
-}
+}))
 </script>
 
 <template>
