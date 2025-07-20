@@ -1,4 +1,4 @@
-export function useTouchDevice() {
+export const useTouchDevice = () => {
   const isTouchDevice = ref(false)
 
   const detectTouch = () => {

@@ -5,48 +5,51 @@ defineProps<{
   images: ImageModel[]
 }>()
 
+const { mdDown } = useBreakpoints()
+
 const currentSlide = ref(0)
 
 const slideTo = (nextSlide: number) => (currentSlide.value = nextSlide)
 
+// TODO: Check config props once again
 const galleryConfig = {
   itemsToShow: 1,
   wrapAround: true,
   slideEffect: 'fade',
   mouseDrag: false,
   touchDrag: false,
-  height: 320,
 }
 
-// TODO: Find out other config props
+// TODO: Check config props once again
 const thumbnailsConfig = {
-  height: 160,
-  itemsToShow: 3,
+  height: mdDown.value ? 80 : 160,
+  itemsToShow: mdDown.value ? 2 : 3,
   touchDrag: false,
-  gap: 10,
+  gap: 8,
 }
 </script>
 
 <template>
-  <Carousel v-bind="galleryConfig" v-model="currentSlide" class="!h-[549px]">
+  <Carousel v-bind="galleryConfig" v-model="currentSlide">
     <Slide v-for="image in images" :key="image.src" class="rounded overflow-hidden">
       <NuxtImg
         src="/img/projects/akordia/akordia-homepage.webp"
         sizes="100vw sm:50vw lg:976px"
         quality="85"
         alt="Akordia homepage screenshot"
+        class="w-full h-full object-contain"
         fetchpriority="high"
       />
     </Slide>
   </Carousel>
 
-  <Carousel v-bind="thumbnailsConfig" v-model="currentSlide" class="mt-2.5 !h-[179px]">
+  <Carousel v-bind="thumbnailsConfig" v-model="currentSlide" class="mt-2.5">
     <Slide v-for="image in images" :key="image.src">
       <template #default="{ currentIndex, isActive }">
         <div
           :class="[
             isActive ? 'opacity-100' : 'opacity-60',
-            'thumbnail rounded overflow-hidden h-full w-full cursor-pointer transition-all',
+            'rounded overflow-hidden h-full w-full cursor-pointer transition-all',
           ]"
           @click="slideTo(currentIndex)"
         >
@@ -54,7 +57,7 @@ const thumbnailsConfig = {
             :src="image.src"
             :alt="image.title"
             fetchpriority="low"
-            class="object-cover w-full h-full"
+            class="w-full h-full object-cover"
           />
         </div>
       </template>
