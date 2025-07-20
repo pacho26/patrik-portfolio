@@ -56,7 +56,7 @@ const thumbnailsConfig = computed(() => ({
           <template #default="{ currentIndex, isActive }">
             <div
               :class="[
-                isActive ? 'opacity-100' : 'opacity-60',
+                isActive ? 'opacity-100' : 'opacity-30',
                 'rounded overflow-hidden h-full w-full cursor-pointer transition-all',
               ]"
               @click="slideTo(currentIndex)"
