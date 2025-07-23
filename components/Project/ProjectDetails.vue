@@ -1,9 +1,11 @@
 <script lang="ts" setup>
-import type { ProjectModel } from '~/assets/ts'
+import { projects, type ProjectModel } from '~/assets/ts'
 
-defineProps<{
+const props = defineProps<{
   project: ProjectModel
 }>()
+
+const hasVerticalImages = computed(() => props.project.imagesOrientation === 'vertical')
 </script>
 
 <template>
@@ -29,7 +31,8 @@ defineProps<{
     </div>
 
     <div class="mt-8 sm:mt-12">
-      <ProjectCarousel :images="project.images" />
+      <ProjectCarouselVertical v-if="hasVerticalImages" :images="project.images" />
+      <ProjectCarousel v-else :images="project.images" />
     </div>
   </div>
 </template>

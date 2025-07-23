@@ -30,7 +30,7 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
             sizes="100vw sm:50vw lg:976px"
             quality="85"
             :alt="image.title"
-            class="w-full h-full object-cover"
+            class="w-full h-full object-cover pointer-events-none select-none"
             :fetchpriority="idx === 0 ? 'high' : 'auto'"
           />
         </div>

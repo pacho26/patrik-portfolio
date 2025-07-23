@@ -11,6 +11,8 @@ export type ImageModel = {
   title: string
 }
 
+type ImageOrientationModel = 'horizonal' | 'vertical'
+
 export type ProjectModel = {
   name: string
   shortDescription: string
@@ -19,6 +21,7 @@ export type ProjectModel = {
   technologies: string[]
   previewImg: string
   images: ImageModel[]
+  imagesOrientation?: ImageOrientationModel
   slug: string
   links?: LinkModel[]
 }
@@ -52,7 +55,7 @@ export const projects: ProjectModel[] = [
       },
       {
         src: '/img/projects/akordia/akordia-advertisement.webp',
-        title: 'Musician Advertisement',
+        title: 'Music Advertisement',
       },
       {
         src: '/img/projects/akordia/akordia-user-songs.webp',
@@ -83,16 +86,37 @@ export const projects: ProjectModel[] = [
     shortDescription:
       'A web app replica of a popular social game, enhanced with many new features.',
     longDescription:
-      'A web app replica of a popular social game, enhanced with many new features. Available in Croatian and English. A personal summer side project.',
+      "A web app replica of the popular social game, enhanced with many new features: record your voice during rounds, celebrate victories with Queen's “We Are The Champions” and a burst of confetti, choose unique team avatars, and much more. Available in Croatian and English. Created as a fun summer side project.",
     year: 2021,
     technologies: ['Vue', 'Nuxt', 'SCSS'],
     previewImg: '/img/projects/akordia/preview.webp',
     images: [
       {
-        src: '/img/projects/akordia/preview.webp',
-        title: 'Song chords',
+        src: '/img/projects/alias/alias-homepage.webp',
+        title: 'Alias Homepage',
+      },
+      {
+        src: '/img/projects/alias/alias-config.webp',
+        title: 'Game Configuration',
+      },
+      {
+        src: '/img/projects/alias/alias-game-start.webp',
+        title: 'Game Start Screen',
+      },
+      {
+        src: '/img/projects/alias/alias-in-game.webp',
+        title: 'In-Game View',
+      },
+      {
+        src: '/img/projects/alias/alias-round-overview.webp',
+        title: 'Round Overview',
+      },
+      {
+        src: '/img/projects/alias/alias-celebration.webp',
+        title: 'Winning Celebration',
       },
     ],
+    imagesOrientation: 'vertical',
     slug: 'alias',
     links: [
       {
@@ -116,12 +140,7 @@ export const projects: ProjectModel[] = [
     year: 2021,
     technologies: ['Vue', 'Tailwind CSS', 'Firebase'],
     previewImg: '/img/projects/akordia/preview.webp',
-    images: [
-      {
-        src: '/img/projects/akordia/preview.webp',
-        title: 'Song chords',
-      },
-    ],
+    images: [],
     slug: 'aimo',
     links: [
       {
@@ -163,12 +182,13 @@ export const experiences: ExperienceModel[] = [
     role: 'Frontend Developer',
     location: 'Zaprešić, Croatia',
     descriptionList: [
-      'Developed an existing high-traffic e-commerce platform from scratch with the aim to modernize its stack and improve performance',
-      'Built admin-side components from scratch used to configure the features of the platform mentioned earlier',
+      'Rebuilt the largest e-commerce platform for pharmacies in Germany from scratch, modernizing the technology stack and enhancing performance',
+      'Built admin-side components from scratch used to configure the features of the platform mentioned above',
       'Maintained and implemented new features for a software development kit designed for standalone web components used in client integrations',
       'Continuous code reviews, focusing on knowledge sharing, maintaining code quality, and supporting team members',
+      'Attended three web summer camps, participating in the JavaScript track and conference program',
     ],
-    technologies: ['JavaScript', 'Vue', 'Node.js'],
+    technologies: ['Vue', 'Nuxt', 'TypeScript', 'UnoCSS', 'Storybook', 'Strapi'],
     period: 'Oct 2022 — Present',
   },
   {
@@ -180,12 +200,12 @@ export const experiences: ExperienceModel[] = [
     role: 'Junior Frontend Developer',
     location: 'Zaprešić, Croatia',
     descriptionList: [
-      'Maintained and implemented new features for high-traffic e-commerce platform',
+      'Maintained and implemented new feature for the biggest e-commerce platform for pharmacies in Germany',
       'Worked on a Vaccine Reservation System, crucial during the COVID-19 pandemic',
       'Built a component library alongside Storybook for testing and documenting components, ensuring both visual and functional accuracy',
       'Built an API library using TypeScript for use across projects',
     ],
-    technologies: ['HTML', 'CSS', 'React'],
+    technologies: ['Vue', 'TypeScript', 'UnoCSS', 'Storybook'],
     period: 'Dec 2021 — Sep 2022',
   },
 ]
