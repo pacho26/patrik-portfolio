@@ -65,3 +65,13 @@ img[loading="lazy"] {
 .carousel__prev--disabled {
   display: none;
 }
+
+.carousel__prev {
+  margin-left: 12px;
+  transform: scale(1.2)
+}
+
+.carousel__next {
+  margin-right: 12px;
+  transform: scale(1.2)
+}

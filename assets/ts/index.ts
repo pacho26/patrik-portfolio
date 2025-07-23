@@ -9,7 +9,6 @@ type LinkModel = {
 export type ImageModel = {
   src: string
   title: string
-  description?: string
 }
 
 export type ProjectModel = {
@@ -33,31 +32,31 @@ export const projects: ProjectModel[] = [
       'Akordia is a web platform built for musicians to share, review, and explore song chords collaboratively. Users can submit chord sheets, which go through a peer-voting system before being published. Powered by Vue, Express, and MongoDB, Akordia modernizes how musicians access and manage chords while connecting them through shared musical interests.',
     year: 2022,
     technologies: ['Vue', 'TypeScript', 'UnoCSS', 'Express', 'MongoDB'],
-    previewImg: '/img/projects/akordia/preview.webp',
+    previewImg: '/img/projects/akordia/akordia-homepage.webp',
     images: [
       {
-        src: '/img/projects/akordia/akordia-homepage.webp',
+        src: '/img/projects/akordia/akordia-song.webp',
         title: 'Song Chords Request For Rating',
-        description:
-          'Users randomly receive song chord requests from other users. They can then choose to approve, disapprove, or skip the requested song.',
-      },
-      {
-        src: '/img/projects/akordia/preview.webp',
-        title: 'Song Chords Request For Rating',
-        description:
-          'Users randomly receive song chord requests from other users. They can then choose to approve, disapprove, or skip the requested song.',
       },
       {
         src: '/img/projects/akordia/akordia-homepage.webp',
         title: 'Song Chords Request For Rating',
-        description:
-          'Users randomly receive song chord requests from other users. They can then choose to approve, disapprove, or skip the requested song.',
       },
       {
-        src: '/img/projects/akordia/preview.webp',
+        src: '/img/projects/akordia/akordia-new-request.webp',
         title: 'Song Chords Request For Rating',
-        description:
-          'Users randomly receive song chord requests from other users. They can then choose to approve, disapprove, or skip the requested song.',
+      },
+      {
+        src: '/img/projects/akordia/akordia-review.webp',
+        title: 'Song Chords Request For Rating',
+      },
+      {
+        src: '/img/projects/akordia/akordia-advertisement.webp',
+        title: 'Song Chords Request For Rating',
+      },
+      {
+        src: '/img/projects/akordia/akordia-user-songs.webp',
+        title: 'Song Chords Request For Rating',
       },
     ],
     slug: 'akordia',
@@ -92,7 +91,6 @@ export const projects: ProjectModel[] = [
       {
         src: '/img/projects/akordia/preview.webp',
         title: 'Song chords',
-        description: 'Song Chords description',
       },
     ],
     slug: 'alias',
@@ -122,7 +120,6 @@ export const projects: ProjectModel[] = [
       {
         src: '/img/projects/akordia/preview.webp',
         title: 'Song chords',
-        description: 'Song Chords description',
       },
     ],
     slug: 'aimo',
