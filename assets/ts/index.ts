@@ -52,7 +52,7 @@ export const projects: ProjectModel[] = [
       },
       {
         src: '/img/projects/akordia/akordia-advertisement.webp',
-        title: 'Music Advertisement',
+        title: 'Musician Advertisement',
       },
       {
         src: '/img/projects/akordia/akordia-user-songs.webp',

@@ -42,6 +42,6 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
         />
       </template>
     </Carousel>
-    <p class="mt-2 text-center text-grey-200">{{ currentImageTitle }}</p>
+    <p class="mt-2 text-center text-grey-200 text-sm sm:text-base">{{ currentImageTitle }}</p>
   </div>
 </template>

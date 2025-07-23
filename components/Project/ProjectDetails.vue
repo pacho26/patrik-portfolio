@@ -10,7 +10,7 @@ defineProps<{
   <div>
     <div class="flex gap-4">
       <MyHeading :level="1" class="font-display font-medium">{{ project.name }}</MyHeading>
-      <p class="text-sm font-medium text-grey-400">{{ project.year }}</p>
+      <p class="font-medium text-grey-400">{{ project.year }}</p>
     </div>
 
     <p class="mt-8 text-grey-200">{{ project.longDescription }}</p>
