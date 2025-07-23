@@ -30,10 +30,9 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
       <Slide v-for="(image, idx) in images" :key="image.src">
         <NuxtImg
           :src="image.src"
-          sizes="300px"
           quality="85"
           :alt="image.title"
-          class="h-full w-[218px] sm:w-[300px] object-cover select-none pointer-events-none"
+          class="h-full w-[220px] sm:w-full object-cover select-none pointer-events-none"
           :fetchpriority="idx === 0 ? 'high' : 'auto'"
         />
       </Slide>
@@ -47,7 +46,9 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
     <NuxtImg
       src="/img/mobile-transparent.png"
       quality="85"
-      class="absolute w-[254px] h-[446px] top-0.5 sm:w-[346px] sm:h-[614px] sm:-top-1.5 z-10 select-none pointer-events-none"
+      alt=""
+      aria-hidden
+      class="absolute w-[254px] h-auto -top-0.5 sm:w-[346px] sm:-top-1.5 z-10 select-none pointer-events-none"
     />
     <p class="mt-8 text-center text-grey-200 text-sm sm:text-base">{{ currentImageTitle }}</p>
   </div>
