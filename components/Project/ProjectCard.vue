@@ -19,8 +19,7 @@ const imgAlt = computed(() => `${props.project.name} preview`)
         :alt="imgAlt"
         sizes="100vw sm:50vw lg:500px"
         preset="project"
-        class="object-cover max-w-100vw h-[200px] md:h-[300px] lg:min-w-[500px]"
-        loading="lazy"
+        class="object-cover max-w-100vw h-[200px] md:h-[300px] md:rounded lg:min-w-[500px]"
       />
       <div class="relative mx-4 mb-4 lg:w-full lg:m-0">
         <MyHeading :level="4" as="h2" class="font-medium max-w-[75%] md:max-w-[85%]">{{

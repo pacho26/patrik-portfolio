@@ -36,27 +36,27 @@ export const projects: ProjectModel[] = [
     images: [
       {
         src: '/img/projects/akordia/akordia-song.webp',
-        title: 'Song Chords Request For Rating',
+        title: 'Song Page with Chords',
       },
       {
         src: '/img/projects/akordia/akordia-homepage.webp',
-        title: 'Song Chords Request For Rating',
+        title: 'Akordia Homepage',
       },
       {
         src: '/img/projects/akordia/akordia-new-request.webp',
-        title: 'Song Chords Request For Rating',
+        title: 'Add New Song Request Form',
       },
       {
         src: '/img/projects/akordia/akordia-review.webp',
-        title: 'Song Chords Request For Rating',
+        title: 'Song Request Review Page',
       },
       {
         src: '/img/projects/akordia/akordia-advertisement.webp',
-        title: 'Song Chords Request For Rating',
+        title: 'Music Advertisement',
       },
       {
         src: '/img/projects/akordia/akordia-user-songs.webp',
-        title: 'Song Chords Request For Rating',
+        title: "Logged-in User's Song List",
       },
     ],
     slug: 'akordia',
