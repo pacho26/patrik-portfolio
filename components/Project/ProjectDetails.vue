@@ -29,7 +29,7 @@ defineProps<{
     </div>
 
     <div class="mt-8 sm:mt-12">
-      <ProjectGallery :images="project.images" />
+      <ProjectCarousel :images="project.images" />
     </div>
   </div>
 </template>
