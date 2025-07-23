@@ -32,7 +32,7 @@ const companyLogoAlt = computed(() => `${props.job.company.name} logo`)
         </MyLink>
       </div>
 
-      <ul class="mt-4 ml-4 list-disc flex flex-col gap-2 text-grey-300 md:ml-0">
+      <ul class="mt-4 ml-4 list-disc flex flex-col gap-2 text-grey-200 md:ml-0">
         <li v-for="(description, index) in job.descriptionList" :key="index" class="leading-[22px]">
           {{ description }}
         </li>

@@ -13,7 +13,7 @@ defineProps<{
       <p class="text-sm font-medium text-grey-400">{{ project.year }}</p>
     </div>
 
-    <p class="mt-8">{{ project.longDescription }}</p>
+    <p class="mt-8 text-grey-200">{{ project.longDescription }}</p>
     <TechList :items="project.technologies" class="mt-4 lg:mt-6" />
 
     <div class="mt-8 sm:mt-12">
