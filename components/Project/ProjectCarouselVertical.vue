@@ -40,14 +40,14 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
         <Navigation v-if="isMounted" class="transition-all" />
       </template>
     </Carousel>
-    <NuxtImg
+    <!-- <NuxtImg
       src="/img/mobile-transparent.png"
       quality="85"
       fetchpriority="high"
       alt=""
       aria-hidden
       class="absolute w-[254px] h-auto -top-0.5 sm:w-[346px] sm:-top-1.5 z-10 select-none pointer-events-none"
-    />
+    /> -->
     <p class="mt-8 text-center text-grey-200 text-sm sm:text-base">{{ currentImageTitle }}</p>
   </div>
 </template>
