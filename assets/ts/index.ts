@@ -32,10 +32,10 @@ export const projects: ProjectModel[] = [
     shortDescription:
       'A web platform built for musicians to share, review, and explore song chords collaboratively.',
     longDescription:
-      'Akordia is a web platform built for musicians to share, review, and explore song chords collaboratively. Users can submit chord sheets, which go through a peer-voting system before being published. Powered by Vue, Express, and MongoDB, Akordia modernizes how musicians access and manage chords while connecting them through shared musical interests.',
+      'Akordia is a web platform built for musicians to share, review, and explore song chords collaboratively. Users can submit chord sheets, which go through a peer-voting system before being published.<br>Powered by Vue, Express, and MongoDB, Akordia modernizes how musicians access and manage chords while connecting them through shared musical interests.',
     year: 2022,
     technologies: ['Vue', 'TypeScript', 'UnoCSS', 'Express', 'MongoDB'],
-    previewImg: '/img/projects/akordia/akordia-homepage.webp',
+    previewImg: '/img/projects/akordia/akordia-preview.webp',
     images: [
       {
         src: '/img/projects/akordia/akordia-song.webp',
@@ -86,10 +86,10 @@ export const projects: ProjectModel[] = [
     shortDescription:
       'A web app replica of a popular social game, enhanced with many new features.',
     longDescription:
-      "A web app replica of the popular social game, enhanced with many new features: record your voice during rounds, celebrate victories with Queen's “We Are The Champions” and a burst of confetti, choose unique team avatars, and much more. Available in Croatian and English. Created as a fun summer side project.",
+      "A web app replica of the popular social game, enhanced with many new features: record your voice during rounds, celebrate victories with Queen's “We Are The Champions” and a burst of confetti, choose unique team avatars, and much more. Available in Croatian and English. <br>Created as a fun summer side project.",
     year: 2021,
     technologies: ['Vue', 'Nuxt', 'SCSS'],
-    previewImg: '/img/projects/akordia/preview.webp',
+    previewImg: '/img/projects/alias/alias-preview.webp',
     images: [
       {
         src: '/img/projects/alias/alias-homepage.webp',
@@ -136,11 +136,32 @@ export const projects: ProjectModel[] = [
     shortDescription:
       'Social media platform connecting ambitious individuals with accountability partners.',
     longDescription:
-      'A social media platform for motivated individuals who desire self-improvement and need an accountability partner to help complete their tasks.',
+      'A social media platform for motivated individuals who desire self-improvement and need an accountability partner to help complete their tasks.<br><br>🥇 Winning project of TVZ Mc2 2021<br>🥇 Winner of Best Design Award on TVZ Mc2 2021',
     year: 2021,
     technologies: ['Vue', 'Tailwind CSS', 'Firebase'],
-    previewImg: '/img/projects/akordia/preview.webp',
-    images: [],
+    previewImg: '/img/projects/aimo/aimo-preview.webp',
+    images: [
+      {
+        src: '/img/projects/aimo/aimo-start-screen.webp',
+        title: 'Start Screen',
+      },
+      {
+        src: '/img/projects/aimo/aimo-homepage.webp',
+        title: 'Homepage with Motivational Notes',
+      },
+      {
+        src: '/img/projects/aimo/aimo-todos.webp',
+        title: "To-Do List with Your and Your Partner's Tasks",
+      },
+      {
+        src: '/img/projects/aimo/aimo-community.webp',
+        title: 'Community Page with the Latest Tasks',
+      },
+      {
+        src: '/img/projects/aimo/aimo-profile.webp',
+        title: 'User Profile',
+      },
+    ],
     slug: 'aimo',
     links: [
       {

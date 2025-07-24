@@ -17,9 +17,9 @@ const imgAlt = computed(() => `${props.project.name} preview`)
       <NuxtImg
         :src="project.previewImg"
         :alt="imgAlt"
-        sizes="100vw sm:50vw lg:500px"
+        sizes="100vw md:450px lg:500px"
         preset="project"
-        class="object-cover max-w-100vw h-[200px] md:h-[300px] md:rounded lg:min-w-[500px]"
+        class="object-cover h-[200px] md:h-[300px] md:rounded md:min-w-[450px] lg:w-[500px]"
       />
       <div class="relative mx-4 mb-4 lg:w-full lg:m-0">
         <MyHeading :level="4" as="h2" class="font-medium max-w-[75%] md:max-w-[85%]">{{

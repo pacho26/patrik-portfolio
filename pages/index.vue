@@ -38,7 +38,7 @@ useHead({
         <p class="mt-4 max-w-[680px] text-center text-grey-200 lcp-text sm:text-lg">
           I'm a web developer specializing in Vue, with a passion for clean, maintainable code.
           Persistent and easygoing, I enjoy creating a positive atmosphere while tackling
-          challenges. Outside of tech, I've spent nearly a decade performing at events as a band
+          challenges. Outside of tech, I've spent nearly a decade performing at various events as a
           musician.
         </p>
       </div>

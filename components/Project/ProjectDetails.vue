@@ -16,7 +16,7 @@ const hasVerticalImages = computed(() => props.project.imagesOrientation === 've
       <p class="font-medium text-grey-400">{{ project.year }}</p>
     </div>
 
-    <p class="mt-8 text-grey-200">{{ project.longDescription }}</p>
+    <p class="mt-8 text-grey-200" v-html="project.longDescription" />
     <TechList :items="project.technologies" class="mt-4 lg:mt-6" />
 
     <div class="mt-8 sm:mt-12">
