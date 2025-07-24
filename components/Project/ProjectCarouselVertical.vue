@@ -27,14 +27,14 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
       v-model="currentSlide"
       class="carousel-vertical rounded max-w-[240px] sm:max-w-[300px] bg-dark"
     >
-      <Slide v-for="(image, idx) in images" :key="image.src">
+      <Slide v-for="(image, index) in images" :key="image.src">
         <NuxtImg
           :src="image.src"
           sizes="220px sm:300px"
           quality="85"
           :alt="image.title"
           class="w-[220px] sm:w-full h-full object-cover pointer-events-none select-none"
-          :fetchpriority="idx === 0 ? 'high' : 'auto'"
+          :fetchpriority="index === 0 ? 'high' : 'auto'"
         />
       </Slide>
       <template #addons>

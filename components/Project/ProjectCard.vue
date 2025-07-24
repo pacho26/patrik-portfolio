@@ -3,6 +3,7 @@ import type { ProjectModel } from '~/assets/ts'
 
 const props = defineProps<{
   project: ProjectModel
+  index: number
 }>()
 
 const imgAlt = computed(() => `${props.project.name} preview`)
@@ -17,8 +18,9 @@ const imgAlt = computed(() => `${props.project.name} preview`)
       <NuxtImg
         :src="project.previewImg"
         :alt="imgAlt"
-        sizes="100vw md:450px lg:500px"
+        sizes="90vw md:450px lg:500px"
         preset="project"
+        :fetchpriority="index === 0 ? 'high' : 'auto'"
         class="object-cover h-[200px] md:h-[300px] md:rounded md:min-w-[450px] lg:w-[500px]"
       />
       <div class="relative mx-4 mb-4 lg:w-full lg:m-0">
