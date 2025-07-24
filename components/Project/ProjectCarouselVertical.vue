@@ -30,9 +30,10 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
       <Slide v-for="(image, idx) in images" :key="image.src">
         <NuxtImg
           :src="image.src"
+          sizes="90vw sm:300px"
           quality="85"
           :alt="image.title"
-          class="h-full w-[220px] sm:w-full object-cover select-none pointer-events-none"
+          class="w-full h-full object-cover pointer-events-none select-none"
           :fetchpriority="idx === 0 ? 'high' : 'auto'"
         />
       </Slide>
