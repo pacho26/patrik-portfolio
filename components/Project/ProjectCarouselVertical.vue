@@ -37,15 +37,13 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
         />
       </Slide>
       <template #addons>
-        <Navigation
-          v-if="isMounted"
-          class="opacity-70 md:opacity-40 hover:opacity-100 transition-all"
-        />
+        <Navigation v-if="isMounted" class="transition-all" />
       </template>
     </Carousel>
     <NuxtImg
       src="/img/mobile-transparent.png"
       quality="85"
+      fetchpriority="high"
       alt=""
       aria-hidden
       class="absolute w-[254px] h-auto -top-0.5 sm:w-[346px] sm:-top-1.5 z-10 select-none pointer-events-none"
