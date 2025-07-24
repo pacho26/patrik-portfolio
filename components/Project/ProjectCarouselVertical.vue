@@ -21,7 +21,7 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
 </script>
 
 <template>
-  <div class="flex flex-col items-center relative pt-4">
+  <div class="flex flex-col items-center relative pt-4 h-[480px] sm:h-[648px]">
     <Carousel
       v-bind="galleryConfig"
       v-model="currentSlide"
@@ -30,10 +30,10 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
       <Slide v-for="(image, idx) in images" :key="image.src">
         <NuxtImg
           :src="image.src"
-          sizes="90vw sm:300px"
+          sizes="220px sm:300px"
           quality="85"
           :alt="image.title"
-          class="w-full h-full object-cover pointer-events-none select-none"
+          class="w-[220px] sm:w-full h-full object-cover pointer-events-none select-none"
           :fetchpriority="idx === 0 ? 'high' : 'auto'"
         />
       </Slide>
@@ -49,6 +49,8 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
       aria-hidden
       class="absolute w-[254px] h-auto -top-0.5 sm:w-[346px] sm:-top-1.5 z-10 select-none pointer-events-none"
     />
-    <p class="mt-8 text-center text-grey-200 text-sm sm:text-base">{{ currentImageTitle }}</p>
+    <p class="absolute bottom-0 text-center text-grey-200 text-sm sm:text-base">
+      {{ currentImageTitle }}
+    </p>
   </div>
 </template>
