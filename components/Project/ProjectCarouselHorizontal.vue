@@ -27,7 +27,7 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
         <div class="relative aspect-[16/9] w-full">
           <NuxtImg
             :src="image.src"
-            sizes="calc(100vw - 40px) lg:976px"
+            sizes="90vw lg:976px"
             quality="85"
             :alt="image.title"
             class="w-full h-full object-cover pointer-events-none select-none"
