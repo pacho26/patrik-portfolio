@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { projects, type ProjectModel } from '~/assets/ts'
-import ProjectCarouselHorizontal from './ProjectCarouselHorizontal.vue';
+import ProjectCarouselHorizontal from './ProjectCarouselHorizontal.vue'
 
 const props = defineProps<{
   project: ProjectModel
@@ -32,8 +32,8 @@ const hasVerticalImages = computed(() => props.project.imagesOrientation === 've
     </div>
 
     <div class="mt-8 sm:mt-12">
-      <ProjectCarouselVertical v-if="hasVerticalImages" :images="project.images" />
-      <ProjectCarouselHorizontal v-else :images="project.images" />
+      <!-- <ProjectCarouselVertical v-if="hasVerticalImages" :images="project.images" /> -->
+      <ProjectCarouselHorizontal :images="project.images" />
     </div>
   </div>
 </template>
