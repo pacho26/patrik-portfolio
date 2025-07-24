@@ -14,12 +14,12 @@
   --color-grey-800: #323e44;
   --color-grey-900: #1b2628;
 
-  --font-sans: "Inter", "sans-serif";
-  --font-display: "Funnel Display", "sans-serif";
+  --font-sans: 'Inter', 'sans-serif';
+  --font-display: 'Funnel Display', 'sans-serif';
 }
 
 ::selection {
-  background-color: #52E9FD4D;
+  background-color: #52e9fd4d;
 }
 
 /* Critical CSS for LCP optimization */
@@ -51,11 +51,25 @@ img {
 }
 
 /* Reduce layout shifts */
-img[loading="lazy"] {
+img[loading='lazy'] {
   aspect-ratio: attr(width / attr(height));
 }
 
 /* Critical carousel styles - inlined to prevent blocking */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.15s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.main-wrapper {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+}
+
 .carousel {
   --vc-nav-background: rgba(255, 255, 255, 0.7);
   --vc-nav-border-radius: 100%;
@@ -66,22 +80,44 @@ img[loading="lazy"] {
   display: none;
 }
 
-.carousel__prev {
-  margin-left: 12px;
+.carousel-horizontal .carousel__prev,
+.carousel-horizontal .carousel__next {
   transform: scale(1.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-  @media only screen and (max-width: 640px) {
+.carousel-horizontal .carousel__prev {
+  margin-left: 16px;
+}
+
+.carousel-horizontal .carousel__next {
+  margin-right: 16px;
+}
+
+.carousel-vertical .carousel__prev {
+  transform: translateX(-90px) scale(1.2);
+}
+
+.carousel-vertical .carousel__next {
+  transform: translateX(90px) scale(1.2);
+}
+
+@media only screen and (max-width: 640px) {
+  .carousel-horizontal .carousel__prev {
     margin-left: 4px;
     transform: scale(1) translateY(-12px);
   }
-}
 
-.carousel__next {
-  margin-right: 12px;
-  transform: scale(1.2);
-  
-  @media only screen and (max-width: 640px) {
+  .carousel-horizontal .carousel__next {
     margin-right: 4px;
     transform: scale(1) translateY(-12px);
+  }
+
+  .carousel-vertical .carousel__prev {
+    transform: translateX(-50px);
+  }
+
+  .carousel-vertical .carousel__next {
+    transform: translateX(50px);
   }
 }

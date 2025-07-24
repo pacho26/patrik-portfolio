@@ -25,7 +25,7 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
     <Carousel
       v-bind="galleryConfig"
       v-model="currentSlide"
-      class="rounded max-w-[240px] sm:max-w-[300px] bg-dark"
+      class="carousel-vertical rounded max-w-[240px] sm:max-w-[300px] bg-dark"
     >
       <Slide v-for="(image, idx) in images" :key="image.src">
         <NuxtImg
@@ -51,21 +51,3 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
     <p class="mt-8 text-center text-grey-200 text-sm sm:text-base">{{ currentImageTitle }}</p>
   </div>
 </template>
-
-<style lang="css" scoped>
-::v-deep(.carousel__prev) {
-  transform: translateX(-80px);
-
-  @media only screen and (max-width: 640px) {
-    transform: translateX(-50px);
-  }
-}
-
-::v-deep(.carousel__next) {
-  transform: translateX(80px);
-
-  @media only screen and (max-width: 640px) {
-    transform: translateX(50px);
-  }
-}
-</style>
