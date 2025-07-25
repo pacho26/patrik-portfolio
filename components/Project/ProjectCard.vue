@@ -20,9 +20,9 @@ const imgAlt = computed(() => `${props.project.name} preview`)
       sizes="90vw sm:350px md:400px"
       preset="project"
       :fetchpriority="index < 2 ? 'high' : 'auto'"
-      densities="x1 x2"
       class="object-cover aspect-3/2 w-full h-auto transition-all sm:w-[350px] md:w-[400px] lg:grayscale-100 lg:group-hover:grayscale-0"
     />
+    <!-- TODO: Add min-height when image is not still loaded -->
     <div class="p-4 md:p-8">
       <div class="flex gap-4 justify-between">
         <MyHeading :level="4" as="h2" class="font-medium max-w-[75%] md:max-w-[85%]">{{
