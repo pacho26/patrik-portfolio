@@ -12,7 +12,7 @@ const imgAlt = computed(() => `${props.project.name} preview`)
 <template>
   <NuxtLink
     :to="{ name: 'projects-slug', params: { slug: project.slug } }"
-    class="block relative overflow-hidden border-1 border-grey-800 rounded cursor-pointer transition-all md:border-none md:grayscale-[0.7] hover:grayscale-0 focus:grayscale-0"
+    class="block relative overflow-hidden border-1 border-grey-800 rounded cursor-pointer transition-all md:border-none"
   >
     <div class="flex flex-col gap-4 relative bg-dark md:bg-transparent md:flex-row lg:gap-8">
       <NuxtImg
@@ -21,7 +21,7 @@ const imgAlt = computed(() => `${props.project.name} preview`)
         sizes="90vw md:450px lg:500px"
         preset="project"
         :fetchpriority="index === 0 ? 'high' : 'auto'"
-        class="object-cover h-[200px] md:h-[300px] md:rounded md:min-w-[450px] lg:w-[500px]"
+        class="object-cover h-[216px] md:h-[300px] md:rounded md:min-w-[450px] lg:w-[500px]"
       />
       <div class="relative mx-4 mb-4 lg:w-full lg:m-0">
         <MyHeading :level="4" as="h2" class="font-medium max-w-[75%] md:max-w-[85%]">{{
