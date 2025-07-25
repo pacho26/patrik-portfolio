@@ -17,6 +17,8 @@ const imgAlt = computed(() => `${props.project.name} preview`)
     <NuxtImg
       :src="project.previewImg"
       :alt="imgAlt"
+      width="400"
+      height="267"
       sizes="90vw sm:350px md:400px"
       preset="project"
       :fetchpriority="index === 0 ? 'high' : 'auto'"
