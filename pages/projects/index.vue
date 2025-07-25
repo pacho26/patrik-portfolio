@@ -18,7 +18,7 @@ useHead({
     <MyHeading :level="1" class="font-display !font-bold">Projects</MyHeading>
     <div
       v-if="projects.length"
-      class="mt-8 flex flex-col gap-8 ssm:mt-16"
+      class="mt-8 flex flex-col gap-8 sm:mt-16"
     >
       <ProjectCard
         v-for="(project, index) in projects"
