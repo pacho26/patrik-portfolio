@@ -16,8 +16,16 @@ useHead({
 <template>
   <div>
     <MyHeading :level="1" class="font-display !font-bold">Projects</MyHeading>
-    <div v-if="projects.length" class="mt-8 flex flex-col gap-8 lg:gap-12 lg:mt-16">
-      <ProjectCard v-for="(project, index) in projects" :index="index" :key="project.slug" :project />
+    <div
+      v-if="projects.length"
+      class="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:mt-16 lg:grid-cols-3"
+    >
+      <ProjectCard
+        v-for="(project, index) in projects"
+        :index="index"
+        :key="project.slug"
+        :project
+      />
     </div>
   </div>
 </template>

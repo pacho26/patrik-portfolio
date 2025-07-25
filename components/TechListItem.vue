@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <li class="bg-cyan-700 text-white px-4 py-1 rounded text-xs md:text-sm">
+  <li class="bg-cyan-700 text-white px-2 py-0.5 rounded text-xs sm:px-4 sm:py-1">
     <slot>{{ label }}</slot>
   </li>
 </template>
