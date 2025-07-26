@@ -38,11 +38,3 @@ const imgAlt = computed(() => `${props.project.name} preview`)
     </div>
   </NuxtLink>
 </template>
-
-<style lang="css" scoped>
-.glass-effect {
-  background: linear-gradient(135deg, rgba(92, 116, 163, 0.1), rgba(92, 116, 163, 0));
-  backdrop-filter: blur(3px);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-}
-</style>
