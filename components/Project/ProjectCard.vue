@@ -14,18 +14,16 @@ const imgAlt = computed(() => `${props.project.name} preview`)
     :to="{ name: 'projects-slug', params: { slug: project.slug } }"
     class="flex flex-col sm:flex-row overflow-hidden rounded cursor-pointer group sm:min-h-[220px] md:min-h-[266.66px] glass-effect"
   >
-    <div class="relative w-full sm:w-[330px] md:w-[400px] aspect-[3/2]">
-      <NuxtImg
-        :src="project.previewImg"
-        :alt="imgAlt"
-        sizes="90vw sm:330px md:400px"
-        preset="project"
-        width="400"
-        height="266.66"
-        :fetchpriority="index < 2 ? 'high' : 'auto'"
-        class="absolute inset-0 object-cover aspect-3/2 w-full h-auto transition-all duration-300 sm:w-[330px] md:w-[400px] lg:grayscale-100 lg:group-hover:grayscale-0"
-      />
-    </div>
+    <NuxtImg
+      :src="project.previewImg"
+      :alt="imgAlt"
+      sizes="90vw sm:330px md:400px"
+      preset="project"
+      width="400"
+      height="266.66"
+      :fetchpriority="index < 2 ? 'high' : 'auto'"
+      class="object-cover aspect-3/2 w-full h-auto transition-all duration-300 sm:w-[330px] md:w-[400px] lg:grayscale-100 lg:group-hover:grayscale-0"
+    />
 
     <!-- TODO: Add min-height when image is not still loaded -->
     <!-- TODO: Also find out why images are shown as 2x (densities?) -->
