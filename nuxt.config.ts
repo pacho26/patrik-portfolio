@@ -17,12 +17,6 @@ export default defineNuxtConfig({
       link: [
         {
           rel: 'preload',
-          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap',
-          as: 'style',
-          crossorigin: 'anonymous',
-        },
-        {
-          rel: 'preload',
           href: '/css/stars.css',
           as: 'style',
           fetchpriority: 'low',
@@ -70,17 +64,6 @@ export default defineNuxtConfig({
         },
       },
     },
-  },
-  fonts: {
-    families: [
-      { name: 'Inter', provider: 'google', weights: ['400', '500', '700'], display: 'swap' },
-      {
-        name: 'Funnel Display',
-        provider: 'google',
-        weights: ['400', '500', '700'],
-        display: 'swap',
-      },
-    ],
   },
   components: ['~/components', { path: '~/components/ui', pathPrefix: false }],
 })
