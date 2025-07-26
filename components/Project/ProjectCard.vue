@@ -19,10 +19,8 @@ const imgAlt = computed(() => `${props.project.name} preview`)
       :alt="imgAlt"
       sizes="90vw sm:330px md:400px"
       preset="project"
-      width="400"
-      height="266.66"
       :fetchpriority="index < 2 ? 'high' : 'auto'"
-      class="object-cover aspect-3/2 w-full h-auto transition-all duration-300 sm:w-[330px] md:w-[400px] lg:grayscale-100 lg:group-hover:grayscale-0"
+      class="object-cover aspect-3/2 w-full h-[calc((100vw-16px)/1.5)] transition-all duration-300 sm:w-[330px] md:w-[400px] lg:grayscale-100 lg:group-hover:grayscale-0"
     />
 
     <!-- TODO: Add min-height when image is not still loaded -->
