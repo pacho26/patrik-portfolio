@@ -38,7 +38,7 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
         />
       </Slide>
       <template #addons>
-        <Navigation v-if="isMounted" class="transition-all" />
+        <Navigation v-if="isMounted" class="transition-all duration-300" />
       </template>
     </Carousel>
     <NuxtImg

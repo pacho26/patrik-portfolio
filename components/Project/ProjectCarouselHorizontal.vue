@@ -40,7 +40,7 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
         </div>
       </Slide>
       <template #addons>
-        <Navigation v-if="isMounted" class="transition-all" />
+        <Navigation v-if="isMounted" class="transition-all duration-300" />
       </template>
     </Carousel>
     <p class="mt-2 text-center text-grey-200 text-sm sm:text-base">{{ currentImageTitle }}</p>
