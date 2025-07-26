@@ -21,7 +21,7 @@ const imgAlt = computed(() => `${props.project.name} preview`)
       preset="project"
       fit="cover"
       :fetchpriority="index < 2 ? 'high' : 'auto'"
-      class="aspect-3/2 w-full h-auto transition-all duration-300 sm:w-[330px] md:w-[400px] lg:grayscale-100 lg:group-hover:grayscale-0"
+      class="aspect-3/2 object-cover w-full h-auto transition-all duration-300 sm:w-[330px] md:w-[400px] lg:grayscale-100 lg:group-hover:grayscale-0"
     />
 
     <div class="p-4 md:p-8 sm:min-h-[220px] md:min-h-[266.66px]">
