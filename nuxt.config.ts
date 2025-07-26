@@ -17,6 +17,27 @@ export default defineNuxtConfig({
       link: [
         {
           rel: 'preload',
+          href: '/fonts/inter/Inter_18pt-Regular.woff2',
+          as: 'font',
+          type: 'font/woff2',
+          crossorigin: 'anonymous',
+        },
+        {
+          rel: 'preload',
+          href: '/fonts/inter/Inter_18pt-Medium.woff2',
+          as: 'font',
+          type: 'font/woff2',
+          crossorigin: 'anonymous',
+        },
+        {
+          rel: 'preload',
+          href: '/fonts/inter/Inter_18pt-Bold.woff2',
+          as: 'font',
+          type: 'font/woff2',
+          crossorigin: 'anonymous',
+        },
+        {
+          rel: 'preload',
           href: '/css/stars.css',
           as: 'style',
           fetchpriority: 'low',
@@ -64,6 +85,17 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+  fonts: {
+    families: [
+      { name: 'Inter', provider: 'google', weights: ['400', '500', '700'], display: 'swap' },
+      {
+        name: 'Funnel Display',
+        provider: 'google',
+        weights: ['400', '500', '700'],
+        display: 'swap',
+      },
+    ],
   },
   components: ['~/components', { path: '~/components/ui', pathPrefix: false }],
 })
