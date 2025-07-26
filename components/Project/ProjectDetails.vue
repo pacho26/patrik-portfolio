@@ -11,7 +11,7 @@ const hasVerticalImages = computed(() => props.project.imagesOrientation === 've
 
 <template>
   <div>
-    <div class="flex gap-4">
+    <div class="flex items-baseline gap-4">
       <MyHeading :level="1" class="font-display font-medium">{{ project.name }}</MyHeading>
       <p class="font-medium text-grey-400">{{ project.year }}</p>
     </div>

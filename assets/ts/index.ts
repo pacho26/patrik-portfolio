@@ -86,7 +86,7 @@ export const projects: ProjectModel[] = [
     shortDescription:
       'A web app replica of a popular social game, enhanced with many new features.',
     longDescription:
-      "A web app replica of the popular social game, enhanced with many new features: record your voice during rounds, celebrate victories with Queen's “We Are The Champions” and a burst of confetti, choose unique team avatars, and much more. Available in Croatian and English. <br>Created as a fun summer side project.",
+      "A web app replica of the popular social game, enhanced with many new features: record your voice during rounds, celebrate victories with Queen's “We Are The Champions” and a burst of confetti, choose unique team avatars, and much more. Available in Croatian and English.<br>Created as a fun summer side project.",
     year: 2021,
     technologies: ['Vue', 'Nuxt', 'SCSS'],
     previewImg: '/img/projects/alias/alias-preview.webp',
