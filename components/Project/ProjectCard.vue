@@ -17,14 +17,14 @@ const imgAlt = computed(() => `${props.project.name} preview`)
     <NuxtImg
       :src="project.previewImg"
       :alt="imgAlt"
-      sizes="45vw sm:330px md:400px"
+      sizes="90vw sm:330px md:400px"
       preset="project"
       fit="cover"
       :fetchpriority="index < 2 ? 'high' : 'auto'"
-      class="aspect-3/2 w-full h-auto sm:h-[220px] md:h-[266.66px] transition-all duration-300 sm:w-[330px] md:w-[400px] lg:grayscale-100 lg:group-hover:grayscale-0"
+      class="w-full aspect-[3/2] sm:w-[330px] md:w-[400px] transition-all duration-300 lg:grayscale-100 lg:group-hover:grayscale-0"
     />
 
-    <div class="p-4 md:p-8 sm:min-h-[220px] md:min-h-[266.66px] ">
+    <div class="p-4 md:p-8 sm:min-h-[220px] md:min-h-[266.66px]">
       <div class="flex gap-4 justify-between">
         <MyHeading :level="4" as="h2" class="font-medium max-w-[75%] md:max-w-[85%]">{{
           project.name
