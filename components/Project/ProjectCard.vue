@@ -12,7 +12,7 @@ const imgAlt = computed(() => `${props.project.name} preview`)
 <template>
   <NuxtLink
     :to="{ name: 'projects-slug', params: { slug: project.slug } }"
-    class="flex flex-col sm:flex-row overflow-hidden rounded cursor-pointer group glass-effect"
+    class="flex flex-col sm:flex-row overflow-hidden rounded cursor-pointer group glass-effect sm:min-h-[220px] md:min-h-[266.66px]"
   >
     <NuxtImg
       :src="project.previewImg"
