@@ -21,7 +21,7 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
 </script>
 
 <template>
-  <div class="flex flex-col items-center relative pt-4 h-[530px] sm:h-[710px]">
+  <div class="flex flex-col items-center relative pt-4 h-[530px] sm:h-[720px]">
     <Carousel
       v-bind="galleryConfig"
       v-model="currentSlide"
