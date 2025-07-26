@@ -27,7 +27,7 @@ const imgAlt = computed(() => `${props.project.name} preview`)
 
     <!-- TODO: Add min-height when image is not still loaded -->
     <!-- TODO: Also find out why images are shown as 2x (densities?) -->
-    <div class="p-4 md:p-8">
+    <div class="p-4 md:p-8 sm:min-h-[220px] md:min-h-[266.66px]">
       <div class="flex gap-4 justify-between">
         <MyHeading :level="4" as="h2" class="font-medium max-w-[75%] md:max-w-[85%]">{{
           project.name
