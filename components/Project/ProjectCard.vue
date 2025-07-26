@@ -25,7 +25,7 @@ const imgAlt = computed(() => `${props.project.name} preview`)
     />
 
     <div class="p-4 md:p-8 sm:min-h-[220px] md:min-h-[266.66px]">
-      <div class="flex gap-4 justify-between">
+      <div class="flex gap-4 justify-between items-baseline">
         <MyHeading :level="4" as="h2" class="font-medium max-w-[75%] md:max-w-[85%]">{{
           project.name
         }}</MyHeading>
