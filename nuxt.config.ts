@@ -17,6 +17,12 @@ export default defineNuxtConfig({
       link: [
         {
           rel: 'preload',
+          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap',
+          as: 'style',
+          crossorigin: 'anonymous',
+        },
+        {
+          rel: 'preload',
           href: '/css/stars.css',
           as: 'style',
           fetchpriority: 'low',
@@ -26,7 +32,13 @@ export default defineNuxtConfig({
     pageTransition: { name: 'fade', mode: 'out-in' },
   },
   devtools: { enabled: true },
-  modules: ['@nuxt/image', '@nuxt/icon', '@nuxt/fonts', '@vesp/nuxt-fontawesome', 'vue3-carousel-nuxt'],
+  modules: [
+    '@nuxt/image',
+    '@nuxt/icon',
+    '@nuxt/fonts',
+    '@vesp/nuxt-fontawesome',
+    'vue3-carousel-nuxt',
+  ],
   css: ['~/assets/css/main.css'],
   vite: {
     plugins: [tailwindcss()],
