@@ -27,10 +27,11 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
       v-model="currentSlide"
       class="carousel-vertical rounded max-w-[240px] sm:max-w-[262px]"
     >
-      <Slide v-for="(image, index) in images" :key="image.src">
+      <Slide v-for="(image, index) in images" :key="image.src" class="rounded-2xl">
+        <!-- TODO: Make project images a bit smaller because of smaller view -->
         <NuxtImg
           :src="image.src"
-          sizes="222px sm:300px"
+          sizes="222px sm:262px"
           quality="85"
           :alt="image.title"
           class="w-[222px] sm:w-full h-full object-cover pointer-events-none select-none"

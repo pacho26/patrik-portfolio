@@ -30,11 +30,11 @@ export const projects: ProjectModel[] = [
   {
     name: 'Akordia',
     shortDescription:
-      'A web platform built for musicians to share, review, and explore song chords collaboratively.',
+      'A collaborative platform for musicians to share and explore song chords.',
     longDescription:
       'Akordia is a web platform built for musicians to share, review, and explore song chords collaboratively. Users can submit chord sheets, which go through a peer-voting system before being published.<br>Powered by Vue, Express, and MongoDB, Akordia modernizes how musicians access and manage chords while connecting them through shared musical interests.',
     year: 2022,
-    technologies: ['Vue', 'TypeScript', 'UnoCSS', 'Express', 'MongoDB'],
+    technologies: ['Vue', 'UnoCSS', 'Express', 'MongoDB'],
     previewImg: '/img/projects/akordia/akordia-preview.webp',
     images: [
       {

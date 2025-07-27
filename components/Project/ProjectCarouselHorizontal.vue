@@ -29,6 +29,7 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
     >
       <Slide v-for="(image, idx) in images" :key="image.src">
         <div class="relative aspect-[16/9] w-full">
+          <!-- TODO: Make project images a bit smaller because of smaller view -->
           <NuxtImg
             :src="image.src"
             sizes="90vw lg:976px"

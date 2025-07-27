@@ -10,9 +10,9 @@ const isHomepage = computed(() => route.path === '/')
     <div class="mt-12 md:mt-20 flex flex-col items-start lg:flex-row gap-10 lg:gap-20 z-30">
       <div
         class="flex flex-col justify-between gap-8 sm:flex-row w-full lg:w-[301px] min-w-[301px] static sm:sticky sm:top-10"
-        :class="{ 'hidden sm:block': !isHomepage }"
+        :class="{ 'hidden lg:block': !isHomepage }"
       >
-        <HomepageProfileCard />
+        <HomepageProfileCard class="w-full" />
       </div>
 
       <main class="relative">
