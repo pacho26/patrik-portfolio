@@ -12,7 +12,7 @@ const imgAlt = computed(() => `${props.project.name} preview`)
 <template>
   <NuxtLink
     :to="{ name: 'projects-slug', params: { slug: project.slug } }"
-    class="flex flex-col sm:flex-row overflow-hidden rounded cursor-pointer group sm:min-h-[220px] md:min-h-[200px] glass-effect"
+    class="relative flex flex-col sm:flex-row overflow-hidden rounded cursor-pointer group sm:min-h-[220px] md:min-h-[200px] glass-effect"
   >
     <NuxtImg
       :src="project.previewImg"
@@ -23,6 +23,9 @@ const imgAlt = computed(() => `${props.project.name} preview`)
       :fetchpriority="index < 2 ? 'high' : 'auto'"
       class="aspect-3/2 object-cover w-full h-auto transition-all duration-300 sm:w-[300px] lg:grayscale-100 lg:group-hover:grayscale-0 lg:group-focus:grayscale-0"
     />
+    <div
+      class="absolute hidden lg:block sm:w-[300px] aspect-3/2 bg-yellow-500/5 group-hover:opacity-0 transition-all duration-300"
+    ></div>
 
     <div class="p-4 md:p-8 sm:min-h-[220px] md:min-h-[200px]">
       <div class="flex gap-4 justify-between items-baseline">
