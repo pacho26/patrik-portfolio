@@ -55,7 +55,7 @@
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-.glass-effect-footer {
+.footer-wrapper {
   background: rgba(92, 116, 163, 0.05);
   backdrop-filter: blur(4px);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);

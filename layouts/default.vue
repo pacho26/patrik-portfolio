@@ -24,7 +24,7 @@ const isHomepage = computed(() => route.path === '/')
       <!-- TODO: Add go to top button? -->
       <!-- <MyButton variant="secondary" class="fixed right-8 bottom-8 z-10">Resume</MyButton> -->
     </div>
-    <footer class="mt-10 sm:mt-12 flex justify-center glass-effect-footer py-3">
+    <footer class="footer-wrapper mt-10 sm:mt-12 flex justify-center py-3">
       <p class="flex items-center gap-2">
         Made with
         <span>
