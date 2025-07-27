@@ -29,7 +29,6 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
     >
       <Slide v-for="(image, idx) in images" :key="image.src">
         <div class="relative aspect-[16/9] w-full">
-          <!-- TODO: Make project images a bit smaller because of smaller view -->
           <NuxtImg
             :src="image.src"
             sizes="90vw lg:976px"
@@ -41,6 +40,7 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
         </div>
       </Slide>
       <template #addons>
+        <!-- TODO: Color controls to match other action buttons -->
         <Navigation v-if="isMounted" class="transition-all duration-300" />
       </template>
     </Carousel>
