@@ -4,20 +4,19 @@ import type { RouteLocationRaw } from 'vue-router'
 const props = defineProps<{
   to: RouteLocationRaw
   icon: string
-  label?: string
+  label: string
   isActive?: boolean
   newTab?: boolean
+  hideLabel?: boolean
 }>()
 
-const linkAttrs = computed(() => {
-  if (props.newTab) {
-    return {
-      target: '_blank',
-      rel: 'noopener noreferrer',
-    }
-  }
-  return {}
-})
+const linkAttrs = computed(() => ({
+  'aria-label': props.label,
+  ...(props.newTab && {
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  }),
+}))
 
 const isExternalLink = computed(() => {
   if (typeof props.to === 'string') {
