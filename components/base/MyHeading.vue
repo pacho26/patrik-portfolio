@@ -33,28 +33,10 @@ const textSizeClass = computed(() => {
       return 'text-md md:text-lg'
   }
 })
-
-const leadingClass = computed(() => {
-  switch (props.level) {
-    case 1:
-      return 'leading-[1.1] md:leading-[1.15]'
-    case 2:
-      return 'leading-[1.15] md:leading-[1.2]'
-    case 3:
-      return 'leading-[1.2] md:leading-[1.25]'
-    case 4:
-      return 'leading-[1.25] md:leading-[1.3]'
-    case 5:
-      return 'leading-[1.3] md:leading-[1.35]'
-    case 6:
-    default:
-      return 'leading-[1.35] md:leading-[1.4]'
-  }
-})
 </script>
 
 <template>
-  <component :is="as" class="font-display text-white" :class="[textSizeClass, leadingClass]">
+  <component :is="as" class="font-display text-white" :class="[textSizeClass]">
     <slot>{{ label }}</slot>
   </component>
 </template>

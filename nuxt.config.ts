@@ -76,5 +76,5 @@ export default defineNuxtConfig({
       },
     ],
   },
-  components: ['~/components', { path: '~/components/ui', pathPrefix: false }],
+  components: ['~/components', { path: '~/components/base', pathPrefix: false }],
 })

@@ -56,7 +56,7 @@ const isExternalLink = computed(() => {
 
     <div
       v-if="label"
-      class="absolute top-[85%] mt-1 left-1/2 -translate-x-1/2 glass-effect text-white text-xs px-2.5 py-1 rounded-md opacity-0 translate-y-0 pointer-events-none transition-all duration-300 ease-out group-hover:opacity-100 group-hover:translate-y-3"
+      class="absolute top-[85%] mt-1 left-1/2 -translate-x-1/2 glass-effect text-white text-xs text-nowrap px-2.5 py-1 rounded-md opacity-0 translate-y-0 pointer-events-none transition-all duration-300 ease-out group-hover:opacity-100 group-hover:translate-y-3"
     >
       {{ label }}
     </div>

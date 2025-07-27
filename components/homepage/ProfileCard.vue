@@ -23,8 +23,8 @@ useHead({
     <MyHeading as="h2" :level="4" class="!text-3xl sm:!text-4xl mt-6 font-bold"
       >Patrik Slovic</MyHeading
     >
-    <p class="text-grey-200 mt-1">Frontend Developer & Musician</p>
-    <p class="text-grey-200 mt-1">Zagreb, Croatia</p>
+    <p class="text-grey-200 mt-2">Frontend Developer & Musician</p>
+    <p class="text-grey-200 mt-2">Zagreb, Croatia</p>
     <div class="mt-4 flex gap-2">
       <MyIconLink
         to="https://www.linkedin.com/in/patrik-slovic/"
@@ -45,6 +45,6 @@ useHead({
         hide-label
       ></MyIconLink>
     </div>
-    <MyButton to="/contact" class="mt-16">Let's talk</MyButton>
+    <MyButton to="/contact" block class="mt-16">Let’s talk</MyButton>
   </div>
 </template>

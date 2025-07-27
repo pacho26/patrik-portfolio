@@ -31,7 +31,7 @@ const sectionClass = 'flex items-center gap-4'
 
 <template>
   <div>
-    <MyHeading as="h3" :level="5" class="font-medium leading-4">Let's connect</MyHeading>
+    <MyHeading as="h3" :level="5" class="font-medium leading-4">Let’s connect</MyHeading>
     <div class="mt-4 flex flex-col gap-4">
       <div v-for="item in contactItems" :key="item.text" :class="sectionClass">
         <Icon :name="item.icon" size="24px" />

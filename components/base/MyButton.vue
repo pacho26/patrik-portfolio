@@ -10,6 +10,7 @@ const props = withDefaults(
     variant?: ButtonVariant
     to?: NuxtLinkProps['to']
     buttonClass?: string
+    block?: boolean
   }>(),
   {
     size: 'md',
@@ -20,11 +21,11 @@ const props = withDefaults(
 const sizeClass = computed(() => {
   switch (props.size) {
     case 'sm':
-      return 'px-2 py-1 text-xs'
+      return 'px-3 py-1 text-xs'
     case 'md':
-      return 'px-4 py-2 text-sm'
+      return 'px-6 py-2 text-sm'
     case 'lg':
-      return 'px-6 py-3 text-base'
+      return 'px-8 py-3 text-base'
     default:
       return ''
   }
@@ -43,7 +44,7 @@ const variantClass = computed(() => {
 </script>
 
 <template>
-  <div>
+  <div :class="{ 'w-full text-center': block }">
     <NuxtLink
       v-if="to"
       :to="to"
