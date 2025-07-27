@@ -5,7 +5,9 @@ defineProps<{
 </script>
 
 <template>
-  <li class="bg-grey-800 text-white px-2 py-0.5 rounded text-xs sm:px-4 sm:py-1">
+  <li
+    class="glass-effect-no-blur text-yellow-500 border-yellow-500 px-2 py-0.5 rounded text-xs sm:px-4 sm:py-1"
+  >
     <slot>{{ label }}</slot>
   </li>
 </template>

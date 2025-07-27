@@ -49,6 +49,11 @@
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
+.glass-effect-no-blur {
+  background: linear-gradient(135deg, rgba(92, 116, 163, 0.14), rgba(92, 116, 163, 0.07));
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
 .carousel {
   --vc-nav-background: rgba(255, 255, 255, 0.7);
   --vc-nav-border-radius: 100%;
