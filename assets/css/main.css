@@ -59,6 +59,17 @@
   display: none;
 }
 
+.carousel__prev,
+.carousel__next {
+  background: #007595; /* Cyan-700 */
+  color: white;
+
+  &:hover {
+    background: #015f79; /* Cyan-800 */
+    color: white;
+  }
+}
+
 .carousel-horizontal .carousel__prev,
 .carousel-horizontal .carousel__next {
   transform: scale(1.2);

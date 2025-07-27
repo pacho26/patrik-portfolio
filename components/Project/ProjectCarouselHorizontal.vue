@@ -40,7 +40,6 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
         </div>
       </Slide>
       <template #addons>
-        <!-- TODO: Color controls to match other action buttons -->
         <Navigation v-if="isMounted" class="transition-all duration-300" />
       </template>
     </Carousel>
