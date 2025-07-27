@@ -25,7 +25,7 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
     <Carousel
       v-bind="galleryConfig"
       v-model="currentSlide"
-      class="carousel-vertical rounded max-w-[240px] sm:max-w-[262px]"
+      class="carousel-vertical rounded max-w-[222px] sm:max-w-[262px]"
     >
       <Slide v-for="(image, index) in images" :key="image.src" class="rounded-2xl">
         <!-- TODO: Make project images a bit smaller because of smaller view -->
