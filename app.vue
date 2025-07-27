@@ -23,7 +23,7 @@ onUnmounted(() => {
 <template>
   <div class="relative min-h-screen text-grey-50 main-wrapper">
     <div
-      class="pointer-events-none fixed inset-0 z-10 hidden md:block"
+      class="pointer-events-none fixed inset-0 hidden md:block"
       :style="gradientStyle"
       aria-hidden
     />
