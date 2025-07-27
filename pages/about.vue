@@ -20,7 +20,7 @@ useHead({
           Persistent and easygoing, I enjoy creating a positive atmosphere while tackling
           challenges. Outside of tech, I've spent nearly a decade performing at various events as a
           musician. -->
-      <!-- <HomepageLanguages class="glass-effect p-4 rounded" /> -->
+      <!-- <HomepageLanguages class="glass-effect p-4 rounded-lg" /> -->
     </div>
   </div>
 </template>

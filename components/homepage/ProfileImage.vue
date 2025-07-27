@@ -32,6 +32,7 @@ const rotation = {
     @mouseleave="rotation.onMouseLeave"
     :class="{ group: !isTouchDevice }"
   >
+    <!-- TODO: Add some kind of absolute label that will say that image is hoverable/clickable -->
     <div
       class="relative w-full h-full rounded-full transition-transform duration-700 transform-3d border-4 profile-image"
       :class="{

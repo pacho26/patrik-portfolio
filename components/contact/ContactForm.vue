@@ -18,6 +18,7 @@ const formData = ref<FormData>({
 })
 
 const errors = ref<FormErrors>({})
+// TODO: Add loading spinner to button
 const isSubmitting = ref(false)
 const isSubmitted = ref(false)
 
@@ -36,8 +37,6 @@ const validateForm = (): boolean => {
 
   if (!formData.value.message.trim()) {
     errors.value.message = 'Message is required'
-  } else if (formData.value.message.trim().length < 10) {
-    errors.value.message = 'Message must be at least 10 characters long'
   }
 
   return Object.keys(errors.value).length === 0
@@ -55,6 +54,7 @@ const handleSubmit = async () => {
     // For now, we'll simulate a successful submission
     await new Promise(resolve => setTimeout(resolve, 1000))
 
+    // TODO: This should be reset after 5 seconds, or less
     isSubmitted.value = true
     formData.value = { name: '', email: '', message: '' }
 
@@ -69,9 +69,8 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-  <div class="w-full">
+  <div class="w-full glass-effect rounded-lg p-6 sm:p-8">
     <form @submit.prevent="handleSubmit" class="space-y-6">
-      <!-- Name Field -->
       <MyInput
         v-model="formData.name"
         type="text"
@@ -82,7 +81,6 @@ const handleSubmit = async () => {
         :error="errors.name"
       />
 
-      <!-- Email Field -->
       <MyInput
         v-model="formData.email"
         type="email"
@@ -93,7 +91,6 @@ const handleSubmit = async () => {
         :error="errors.email"
       />
 
-      <!-- Message Field -->
       <MyInput
         v-model="formData.message"
         type="textarea"
@@ -105,7 +102,6 @@ const handleSubmit = async () => {
         :rows="5"
       />
 
-      <!-- Submit Button -->
       <MyButton type="submit" variant="primary"> Send Message </MyButton>
     </form>
   </div>

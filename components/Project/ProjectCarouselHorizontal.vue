@@ -25,7 +25,7 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
     <Carousel
       v-bind="galleryConfig"
       v-model="currentSlide"
-      class="carousel-horizontal rounded overflow-hidden"
+      class="carousel-horizontal rounded-lg overflow-hidden"
     >
       <Slide v-for="(image, idx) in images" :key="image.src">
         <div class="relative aspect-[16/9] w-full">
