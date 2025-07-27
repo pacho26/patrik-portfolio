@@ -21,7 +21,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="relative min-h-screen text-grey-50 overflow-hidden main-wrapper">
+  <div class="relative min-h-screen text-grey-50 main-wrapper">
     <div
       class="pointer-events-none fixed inset-0 z-10 hidden md:block"
       :style="gradientStyle"

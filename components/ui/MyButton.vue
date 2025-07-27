@@ -35,7 +35,7 @@ const variantClass = computed(() => {
     case 'primary':
       return 'bg-cyan-600 text-white hover:bg-cyan-700 hover:border-cyan-700'
     case 'secondary':
-      return 'bg-dark text-cyan-500 hover:bg-cyan-600 hover:text-white'
+      return 'glass-effect text-cyan-500 hover:!bg-cyan-600 hover:text-white'
     default:
       return ''
   }
