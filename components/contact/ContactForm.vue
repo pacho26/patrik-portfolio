@@ -69,32 +69,21 @@ const handleSubmit = async () => {
 <template>
   <div class="w-full glass-effect rounded-lg p-6 sm:p-8">
     <form @submit.prevent="handleSubmit" class="space-y-6">
-      <MyInput
-        v-model="formData.name"
-        type="text"
-        label="Name"
-        placeholder="Your name"
-        :required="true"
-        :error="errors.name"
-      />
+      <MyInput v-model="formData.name" label="Name*" placeholder="Your name" :error="errors.name" />
 
       <MyInput
         v-model="formData.email"
-        type="email"
-        label="Email"
+        label="Email*"
         placeholder="example@example.com"
-        :required="true"
         :error="errors.email"
       />
 
       <MyInput
         v-model="formData.message"
-        type="textarea"
-        label="Message"
+        textarea
+        label="Message*"
         placeholder="Your message"
-        :required="true"
         :error="errors.message"
-        :rows="5"
       />
 
       <MyButton type="submit" variant="primary" class="w-full sm:w-fit">Send Message</MyButton>

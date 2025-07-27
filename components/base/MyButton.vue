@@ -47,7 +47,7 @@ const variantClass = computed(() => {
   <NuxtLink
     v-if="to"
     :to="to"
-    class="block border-1 rounded-lg cursor-pointer transition-all duration-300 font-medium tracking-widest text-center"
+    class="block border-1 rounded cursor-pointer transition-all duration-300 font-medium tracking-widest text-center"
     :class="[sizeClass, variantClass, buttonClass]"
   >
     <slot />
@@ -56,7 +56,7 @@ const variantClass = computed(() => {
   <button
     v-else
     type="button"
-    class="border-1 rounded-lg cursor-pointer transition-all duration-300 font-medium tracking-widest text-center"
+    class="border-1 rounded cursor-pointer transition-all duration-300 font-medium tracking-widest text-center"
     :class="[sizeClass, variantClass, buttonClass]"
   >
     <slot />
