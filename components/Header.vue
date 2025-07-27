@@ -1,21 +1,43 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const route = useRoute()
+
+const isActive = computed(() => {
+  const currentPath = route.path
+  return {
+    home: currentPath === '/',
+    experience: currentPath === '/experience',
+    projects: currentPath.startsWith('/projects'),
+    about: currentPath === '/about',
+    contact: currentPath === '/contact',
+  }
+})
+</script>
 
 <template>
-  <div class="flex items-center justify-between">
-    <MyLink to="/" no-hover-underline aria-label="Home">
-      <NuxtImg
-        width="36"
-        height="36"
-        src="/img/ps-logo.svg"
-        alt="Home"
-        sizes="36px"
-        loading="eager"
-        fetchpriority="high"
+  <div class="flex items-center justify-center w-fit mx-auto">
+    <nav
+      class="px-5 py-1.5 flex items-center justify-between gap-2 glass-effect rounded-xl w-[335px] z-10"
+    >
+      <MyIconLink to="/" icon="uil:estate" label="Home" :is-active="isActive.home" />
+      <MyIconLink
+        to="/experience"
+        icon="uil:briefcase"
+        label="Experience"
+        :is-active="isActive.experience"
       />
-    </MyLink>
-    <nav class="flex justify-end items-center gap-8 text-white">
-      <MyLink to="/experience">Experience</MyLink>
-      <MyLink to="/projects">Projects</MyLink>
+      <MyIconLink
+        to="/projects"
+        icon="uil:folder"
+        label="Projects"
+        :is-active="isActive.projects"
+      />
+      <MyIconLink to="/about" icon="uil:user" label="About" :is-active="isActive.about" />
+      <MyIconLink
+        to="/contact"
+        icon="uil:envelope"
+        label="Contact"
+        :is-active="isActive.contact"
+      />
     </nav>
   </div>
 </template>

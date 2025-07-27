@@ -33,9 +33,9 @@ const sizeClass = computed(() => {
 const variantClass = computed(() => {
   switch (props.variant) {
     case 'primary':
-      return 'bg-cyan-400 text-white hover:bg-cyan-500'
+      return 'bg-cyan-600 text-white hover:bg-cyan-700 hover:border-cyan-700'
     case 'secondary':
-      return 'bg-transparent text-cyan-500 hover:bg-cyan-500 hover:text-white'
+      return 'bg-dark text-cyan-500 hover:bg-cyan-600 hover:text-white'
     default:
       return ''
   }
@@ -47,7 +47,7 @@ const variantClass = computed(() => {
     <NuxtLink
       v-if="to"
       :to="to"
-      class="border-1 border-cyan-500 rounded cursor-pointer transition-all font-bold tracking-widest"
+      class="block border-1 border-cyan-600 rounded cursor-pointer transition-all duration-300 font-medium tracking-widest"
       :class="[sizeClass, variantClass, buttonClass]"
     >
       <slot />
@@ -56,7 +56,7 @@ const variantClass = computed(() => {
     <button
       v-else
       type="button"
-      class="border-1 border-cyan-500 rounded cursor-pointer transition-all font-bold tracking-widest"
+      class="border-1 border-cyan-600 rounded cursor-pointer transition-all duration-300 font-medium tracking-widest"
       :class="[sizeClass, variantClass, buttonClass]"
     >
       <slot />
