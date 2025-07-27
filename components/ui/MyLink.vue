@@ -26,7 +26,7 @@ const isExternalLink = computed(() => {
   return false
 })
 
-const containerClass = `relative py-1 uppercase font-bold tracking-widest text-sm after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:bg-cyan-300 after:transition-[width] after:duration-200 after:ease-in-out hover:after:w-full`
+const containerClass = `relative py-1 uppercase font-bold tracking-widest text-sm after:content-[''] after:absolute after:left-0 after:bottom-0 after:w-0 after:bg-yellow-300 after:transition-[width] after:duration-200 after:ease-in-out hover:after:w-full`
 </script>
 
 <template>

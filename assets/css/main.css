@@ -61,11 +61,11 @@
 
 .carousel__prev,
 .carousel__next {
-  background: #007595; /* Cyan-700 */
+  background: #a66000; /* yellow-700 */
   color: white;
 
   &:hover {
-    background: #015f79; /* Cyan-800 */
+    background: #884b00; /* yellow-800 */
     color: white;
   }
 }
