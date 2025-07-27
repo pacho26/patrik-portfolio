@@ -54,12 +54,10 @@ const handleSubmit = async () => {
     // For now, we'll simulate a successful submission
     await new Promise(resolve => setTimeout(resolve, 1000))
 
+    // TODO: Show success notification
     // TODO: This should be reset after 5 seconds, or less
     isSubmitted.value = true
     formData.value = { name: '', email: '', message: '' }
-
-    // Reset success message after 5 seconds
-    // TODO: Show success notification
   } catch (error) {
     console.error('Error submitting form:', error)
   } finally {
@@ -77,7 +75,6 @@ const handleSubmit = async () => {
         label="Name"
         placeholder="Your name"
         :required="true"
-        :disabled="isSubmitting"
         :error="errors.name"
       />
 
@@ -85,9 +82,8 @@ const handleSubmit = async () => {
         v-model="formData.email"
         type="email"
         label="Email"
-        placeholder="your.email@example.com"
+        placeholder="example@example.com"
         :required="true"
-        :disabled="isSubmitting"
         :error="errors.email"
       />
 
@@ -95,14 +91,13 @@ const handleSubmit = async () => {
         v-model="formData.message"
         type="textarea"
         label="Message"
-        placeholder="Your message (minimum 10 characters)"
+        placeholder="Your message"
         :required="true"
-        :disabled="isSubmitting"
         :error="errors.message"
         :rows="5"
       />
 
-      <MyButton type="submit" variant="primary"> Send Message </MyButton>
+      <MyButton type="submit" variant="primary" class="w-full sm:w-fit">Send Message</MyButton>
     </form>
   </div>
 </template>

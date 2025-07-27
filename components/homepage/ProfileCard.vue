@@ -45,6 +45,6 @@ useHead({
         hide-label
       ></MyIconLink>
     </div>
-    <MyButton to="/contact" block class="mt-16">Let’s talk</MyButton>
+    <MyButton to="/contact" class="mt-16 w-full">Let’s talk</MyButton>
   </div>
 </template>

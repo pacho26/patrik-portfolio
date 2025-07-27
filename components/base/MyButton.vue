@@ -21,11 +21,11 @@ const props = withDefaults(
 const sizeClass = computed(() => {
   switch (props.size) {
     case 'sm':
-      return 'px-3 py-1 text-xs'
+      return 'px-3 py-1.5 text-xs'
     case 'md':
-      return 'px-6 py-2 text-sm'
+      return 'px-5 py-2.5 text-sm'
     case 'lg':
-      return 'px-8 py-3 text-base'
+      return 'px-7 py-3.5 text-base'
     default:
       return ''
   }
@@ -44,23 +44,21 @@ const variantClass = computed(() => {
 </script>
 
 <template>
-  <div :class="{ 'w-full text-center': block }">
-    <NuxtLink
-      v-if="to"
-      :to="to"
-      class="block border-1 rounded-lg cursor-pointer transition-all duration-300 font-medium tracking-widest"
-      :class="[sizeClass, variantClass, buttonClass]"
-    >
-      <slot />
-    </NuxtLink>
+  <NuxtLink
+    v-if="to"
+    :to="to"
+    class="block border-1 rounded-lg cursor-pointer transition-all duration-300 font-medium tracking-widest text-center"
+    :class="[sizeClass, variantClass, buttonClass]"
+  >
+    <slot />
+  </NuxtLink>
 
-    <button
-      v-else
-      type="button"
-      class="border-1 rounded-lg cursor-pointer transition-all duration-300 font-medium tracking-widest"
-      :class="[sizeClass, variantClass, buttonClass]"
-    >
-      <slot />
-    </button>
-  </div>
+  <button
+    v-else
+    type="button"
+    class="border-1 rounded-lg cursor-pointer transition-all duration-300 font-medium tracking-widest text-center"
+    :class="[sizeClass, variantClass, buttonClass]"
+  >
+    <slot />
+  </button>
 </template>

@@ -16,7 +16,7 @@ useHead({
 <template>
   <div>
     <MyHeading :level="1" class="font-display !font-bold"
-      >Check out my <span class="text-yellow-500">Projects</span></MyHeading
+      >Check Out My <span class="text-yellow-500">Projects</span></MyHeading
     >
     <div v-if="projects.length" class="mt-8 flex flex-col gap-8 sm:mt-16">
       <ProjectCard
