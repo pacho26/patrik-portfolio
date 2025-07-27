@@ -21,19 +21,19 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
 </script>
 
 <template>
-  <div class="flex flex-col items-center relative pt-4 h-[530px] sm:h-[720px]">
+  <div class="flex flex-col items-center relative pt-4 h-[534px] sm:h-[635px]">
     <Carousel
       v-bind="galleryConfig"
       v-model="currentSlide"
-      class="carousel-vertical rounded max-w-[240px] sm:max-w-[300px] bg-dark"
+      class="carousel-vertical rounded max-w-[240px] sm:max-w-[262px]"
     >
       <Slide v-for="(image, index) in images" :key="image.src">
         <NuxtImg
           :src="image.src"
-          sizes="220px sm:300px"
+          sizes="222px sm:300px"
           quality="85"
           :alt="image.title"
-          class="w-[220px] sm:w-full h-full object-cover pointer-events-none select-none"
+          class="w-[222px] sm:w-full h-full object-cover pointer-events-none select-none"
           :fetchpriority="index === 0 ? 'high' : 'auto'"
         />
       </Slide>
@@ -45,10 +45,10 @@ const currentImageTitle = computed(() => props.images.at(currentSlide.value)?.ti
       src="/img/mobile-transparent.png"
       quality="85"
       fetchpriority="high"
-      sizes="254px sm:343px"
+      sizes="254px sm:300px"
       alt=""
       aria-hidden
-      class="absolute w-[254px] h-auto -top-0.5 sm:w-[343px] sm:-top-1 z-10 select-none pointer-events-none"
+      class="absolute w-[254px] h-auto top-0.5 sm:top-0 sm:w-[300px] z-10 select-none pointer-events-none"
     />
     <p class="absolute bottom-0 text-center text-grey-200 text-sm sm:text-base">
       {{ currentImageTitle }}
