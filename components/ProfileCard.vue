@@ -30,8 +30,8 @@
       ></MyIconLink>
     </div>
     <MyButton to="/contact" class="mt-10 w-full">Let’s talk</MyButton>
-    <a href="/patrik-slovic-resume.pdf" target="_blank" rel="noopener" class="w-full">
-      <MyButton variant="secondary" class="mt-4 w-full">View Resume </MyButton>
+    <a href="/patrik-slovic-resume.pdf" target="_blank" rel="noopener" class="mt-4 w-full">
+      <MyButton variant="secondary" class="w-full">View Resume </MyButton>
     </a>
   </div>
 </template>

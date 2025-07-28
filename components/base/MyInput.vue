@@ -19,7 +19,7 @@ const emit = defineEmits<{
 
 const inputClass = computed(() => [
   'w-full rounded  transition-all duration-300',
-  'bg-[#00000055] backdrop-blur-sm text-white placeholder-grey-400',
+  'bg-black/33 backdrop-blur-lg text-white placeholder-grey-400',
   'focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent',
   'px-4 py-3 text-base',
 ])
