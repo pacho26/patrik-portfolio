@@ -40,7 +40,7 @@ const handleClose = () => {
 
 const notificationClasses = computed(() => {
   const baseClasses =
-    'fixed top-8 right-8 z-50 p-4 rounded shadow-lg max-w-sm transition-all duration-300'
+    'fixed top-5 left-5 right-5 sm:top-8 sm:right-8 sm:left-auto z-50 p-4 rounded shadow-lg w-[calc(100vw-40px)] sm:w-auto sm:max-w-sm transition-all duration-300'
 
   if (props.type === 'success') {
     return `${baseClasses} bg-green-100 text-green-800`
@@ -53,11 +53,11 @@ const notificationClasses = computed(() => {
 <template>
   <Transition
     enter-active-class="transition ease-out duration-300"
-    enter-from-class="transform translate-x-full opacity-0"
-    enter-to-class="transform translate-x-0 opacity-100"
+    enter-from-class="transform -translate-y-full sm:-translate-y-0 sm:translate-x-full opacity-0"
+    enter-to-class="transform translate-y-0 sm:translate-x-0 opacity-100"
     leave-active-class="transition ease-in duration-200"
-    leave-from-class="transform translate-x-0 opacity-100"
-    leave-to-class="transform translate-x-full opacity-0"
+    leave-from-class="transform translate-y-0 sm:translate-x-0 opacity-100"
+    leave-to-class="transform -translate-y-full sm:-translate-y-0 sm:translate-x-full opacity-0"
   >
     <div v-if="isVisible" :class="notificationClasses" class="flex items-start gap-4">
       <div class="flex items-center gap-3">
