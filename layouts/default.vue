@@ -41,7 +41,7 @@ onUnmounted(() => {
       <Transition name="scroll-button">
         <MyButton
           v-show="isScrollButtonVisible"
-          class="fixed right-5 bottom-5 lg:right-8 lg:bottom-8 rounded-full w-8 h-[42px] z-20 flex items-center justify-center"
+          class="fixed right-5 bottom-5 lg:right-8 lg:bottom-8 rounded-full w-12 h-12 z-20 flex items-center justify-center"
           @click="scrollToTop"
         >
           <Icon name="uil:arrow-up" size="28px" class="relative z-10 text-white translate-y-0.5" />
