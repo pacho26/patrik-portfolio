@@ -9,7 +9,6 @@ const props = withDefaults(
     size?: string
     isActive?: boolean
     newTab?: boolean
-    hideLabel?: boolean
   }>(),
   {
     size: '24px',

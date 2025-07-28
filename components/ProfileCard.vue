@@ -11,22 +11,22 @@
         to="https://www.linkedin.com/in/patrik-slovic/"
         icon="uil:linkedin"
         label="LinkedIn"
-        hide-label
         size="28px"
+        new-tab
       ></MyIconLink>
       <MyIconLink
         to="https://github.com/pacho26"
         icon="uil:github"
         label="GitHub"
-        hide-label
         size="28px"
+        new-tab
       ></MyIconLink>
       <MyIconLink
         to="mailto:patrikslovic@gmail.com"
         icon="uil:envelope"
         label="E-Mail"
-        hide-label
         size="28px"
+        new-tab
       ></MyIconLink>
     </div>
     <MyButton to="/contact" class="mt-10 w-full">Let’s talk</MyButton>

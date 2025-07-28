@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-const props = withDefaults(
+import type { InputHTMLAttributes } from 'vue'
+
+withDefaults(
   defineProps<{
     modelValue: string
     label: string
@@ -8,8 +10,7 @@ const props = withDefaults(
     rows?: number
     id?: string
     textarea?: boolean
-    // Allow additional HTML attributes
-    [key: string]: any
+    attrs?: InputHTMLAttributes
   }>(),
   {
     rows: 5,
@@ -31,12 +32,6 @@ const handleInput = (event: Event) => {
   const target = event.target as HTMLInputElement | HTMLTextAreaElement
   emit('update:modelValue', target.value)
 }
-
-// Extract props that should be passed to the input/textarea
-const inputProps = computed(() => {
-  const { modelValue, label, placeholder, error, rows, id, textarea, ...rest } = props
-  return rest
-})
 </script>
 
 <template>
@@ -51,9 +46,9 @@ const inputProps = computed(() => {
       :value="modelValue"
       :placeholder="placeholder"
       :rows="rows"
+      v-bind="attrs"
       class="resize-none"
       :class="[inputClass]"
-      v-bind="inputProps"
       @input="handleInput"
     ></textarea>
 
@@ -62,8 +57,8 @@ const inputProps = computed(() => {
       :id="label"
       :value="modelValue"
       :placeholder="placeholder"
+      v-bind="attrs"
       :class="[inputClass]"
-      v-bind="inputProps"
       @input="handleInput"
     />
 
