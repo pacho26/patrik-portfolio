@@ -25,6 +25,11 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: 'fade', mode: 'out-in' },
   },
+  runtimeConfig: {
+    public: {
+      web3formsAccessKey: process.env.WEB3FORMS_ACCESS_KEY,
+    },
+  },
   devtools: { enabled: true },
   modules: [
     '@nuxt/image',

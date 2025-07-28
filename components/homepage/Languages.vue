@@ -29,7 +29,7 @@ const languageItems: LanguageItem[] = [
 ]
 
 const sectionClass = 'flex items-center justify-between gap-12'
-const flagClass = 'flex flex-col items-center min-w-[48px]'
+const flagClass = 'flex flex-col items-center min-w-12'
 </script>
 
 <template>
