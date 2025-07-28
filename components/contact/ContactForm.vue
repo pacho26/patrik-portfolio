@@ -81,7 +81,6 @@ const handleSubmit = async () => {
 <template>
   <div>
     <div class="w-full glass-effect rounded-lg p-6 sm:p-8">
-      <!-- TODO: Make input and textarea non transparent -->
       <form @submit.prevent="handleSubmit" class="space-y-6">
         <MyInput
           v-model="formData.name"
