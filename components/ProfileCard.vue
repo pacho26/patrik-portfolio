@@ -19,7 +19,7 @@ useHead({
 
 <template>
   <div class="glass-effect p-8 flex flex-col items-center rounded-lg">
-    <HomepageProfileImage />
+    <ProfileImage />
     <MyHeading as="h2" :level="4" class="!text-3xl sm:!text-4xl mt-6 font-bold"
       >Patrik Slovic</MyHeading
     >
