@@ -56,7 +56,7 @@ const handleSubmit = async () => {
     const body = {
       ...formData.value,
       access_key: config.public.web3formsAccessKey,
-      subject: 'New Inquiry from Portfolio Contact Form',
+      subject: 'Portfolio Contact Form - New Inquiry',
     }
     await $fetch('https://api.web3forms.com/submit', {
       method: 'POST',

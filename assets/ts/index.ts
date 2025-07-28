@@ -29,10 +29,9 @@ export type ProjectModel = {
 export const projects: ProjectModel[] = [
   {
     name: 'Akordia',
-    shortDescription:
-      'A collaborative platform for musicians to share and explore song chords.',
+    shortDescription: 'A collaborative platform for musicians to share and explore song chords.',
     longDescription:
-      'Akordia is a web platform built for musicians to share, review, and explore song chords collaboratively. Users can submit chord sheets, which go through a peer-voting system before being published.<br>Powered by Vue, Express, and MongoDB, Akordia modernizes how musicians access and manage chords while connecting them through shared musical interests.',
+      'Akordia is a web platform built for musicians to share, review, and explore song chords collaboratively. Users can submit chord sheets, which go through a peer-voting system before being published.<br>Akordia modernizes how musicians access and manage chords while connecting them through shared musical interests.<br>Developed as a college graduation project.',
     year: 2022,
     technologies: ['Vue', 'UnoCSS', 'Express', 'MongoDB'],
     previewImg: '/img/projects/akordia/akordia-preview.webp',
@@ -204,9 +203,9 @@ export const experiences: ExperienceModel[] = [
     location: 'Zaprešić, Croatia',
     descriptionList: [
       'Rebuilt the largest e-commerce platform for pharmacies in Germany from scratch, modernizing the technology stack and enhancing performance',
-      'Built admin-side components from scratch used to configure the features of the platform mentioned above',
+      'Built admin-side components from scratch, used to configure the features of the platform mentioned above',
       'Maintained and implemented new features for a software development kit designed for standalone web components used in client integrations',
-      'Continuous code reviews, focusing on knowledge sharing, maintaining code quality, and supporting team members',
+      'Performed continuous code reviews, focusing on knowledge sharing, maintaining code quality, and supporting team members',
       'Attended three web summer camps, participating in the JavaScript track and conference program',
     ],
     technologies: ['Vue', 'Nuxt', 'TypeScript', 'UnoCSS', 'Storybook', 'Strapi'],
@@ -221,7 +220,7 @@ export const experiences: ExperienceModel[] = [
     role: 'Junior Frontend Developer',
     location: 'Zaprešić, Croatia',
     descriptionList: [
-      'Maintained and implemented new feature for the biggest e-commerce platform for pharmacies in Germany',
+      'Maintained and implemented new features for the biggest e-commerce platform for pharmacies in Germany',
       'Worked on a Vaccine Reservation System, crucial during the COVID-19 pandemic',
       'Built a component library alongside Storybook for testing and documenting components, ensuring both visual and functional accuracy',
       'Built an API library using TypeScript for use across projects',

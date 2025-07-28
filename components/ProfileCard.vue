@@ -1,22 +1,3 @@
-<script lang="ts" setup>
-useHead({
-  link: [
-    {
-      rel: 'preload',
-      as: 'image',
-      href: '/img/profile-illustration.webp?w=192&h=192&f=webp',
-      fetchpriority: 'high',
-    },
-    {
-      rel: 'preload',
-      as: 'image',
-      href: '/img/profile-real.webp?w=192&h=192&f=webp',
-      fetchpriority: 'low',
-    },
-  ],
-})
-</script>
-
 <template>
   <div class="glass-effect p-8 flex flex-col items-center rounded-lg">
     <ProfileImage />
@@ -46,5 +27,13 @@ useHead({
       ></MyIconLink>
     </div>
     <MyButton to="/contact" class="mt-16 w-full">Let’s talk</MyButton>
+    <MyButton
+      variant="secondary"
+      to="/patrik-slovic-resume.pdf"
+      target="_blank"
+      rel="noopener"
+      class="mt-4 w-full"
+      >View Resume</MyButton
+    >
   </div>
 </template>
