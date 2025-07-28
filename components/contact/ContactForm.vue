@@ -20,8 +20,7 @@ const formData = ref<FormData>({
 })
 
 const errors = ref<FormErrors>({})
-// TODO: Add loading spinner to button
-const isSubmitting = ref(false)
+const isLoading = ref(false)
 const showNotification = ref(false)
 const notificationType = ref<'success' | 'error'>('success')
 const notificationMessage = ref('')
@@ -51,7 +50,7 @@ const handleSubmit = async () => {
     return
   }
 
-  isSubmitting.value = true
+  isLoading.value = true
 
   try {
     const body = {
@@ -59,11 +58,10 @@ const handleSubmit = async () => {
       access_key: config.public.web3formsAccessKey,
       subject: 'New Inquiry from Portfolio Contact Form',
     }
-    const response = await $fetch('https://api.web3forms.com/submit', {
+    await $fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       body,
     })
-    console.log('response :>> ', response)
 
     notificationType.value = 'success'
     notificationMessage.value = 'Message sent successfully! Thank you for reaching out.'
@@ -75,7 +73,7 @@ const handleSubmit = async () => {
     notificationMessage.value = 'Failed to send message. Please try again later.'
     showNotification.value = true
   } finally {
-    isSubmitting.value = false
+    isLoading.value = false
   }
 }
 </script>
@@ -106,7 +104,9 @@ const handleSubmit = async () => {
           :error="errors.message"
         />
 
-        <MyButton type="submit" variant="primary" class="w-full sm:w-fit">Send Message</MyButton>
+        <MyButton type="submit" variant="primary" :loading="isLoading" class="w-full sm:w-fit"
+          >Send Message</MyButton
+        >
       </form>
     </div>
 
