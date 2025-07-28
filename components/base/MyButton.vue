@@ -53,7 +53,7 @@ const buttonClasses = computed(() => [
   <NuxtLink
     v-if="to && !loading"
     :to="to"
-    class="block border-1 rounded cursor-pointer transition-all duration-300 font-medium tracking-widest text-center"
+    class="block border-1 rounded cursor-pointer transition-all duration-300 tracking-widest text-center"
     :class="buttonClasses"
   >
     <slot />
@@ -63,7 +63,7 @@ const buttonClasses = computed(() => [
     v-else
     type="button"
     :disabled="loading"
-    class="border-1 rounded cursor-pointer transition-all duration-300 font-medium tracking-widest text-center"
+    class="border-1 rounded cursor-pointer transition-all duration-300 tracking-widest text-center"
     :class="buttonClasses"
   >
     <div v-if="loading" class="absolute inset-0 flex items-center justify-center">
