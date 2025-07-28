@@ -14,7 +14,7 @@ useHead({
 <template>
   <div>
     <MyHeading :level="1" class="font-display font-bold"
-      >Shaping the Web with <span class="text-yellow-500">Passion</span></MyHeading
+      >Shaping the Web with <span class="text-yellow-600">Passion</span></MyHeading
     >
   </div>
 </template>

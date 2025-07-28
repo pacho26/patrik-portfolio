@@ -14,7 +14,7 @@ useHead({
 <template>
   <div>
     <MyHeading :level="1" class="font-display font-bold"
-      >Chapters of My <span class="text-yellow-500">Career</span></MyHeading
+      >Chapters of My <span class="text-yellow-600">Career</span></MyHeading
     >
     <ExperienceList class="mt-8 md:mt-16" />
   </div>

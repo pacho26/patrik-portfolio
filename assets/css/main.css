@@ -55,23 +55,23 @@
 }
 
 .main-wrapper {
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  background: radial-gradient(ellipse at bottom, #1b2835 0%, #090a0f 100%);
 }
 
 .glass-effect {
-  background: linear-gradient(135deg, rgba(92, 116, 163, 0.14), rgba(92, 116, 163, 0.07));
+  background: linear-gradient(135deg, rgba(83, 104, 147, 0.14), rgba(83, 104, 147, 0.07));
   backdrop-filter: blur(2px);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.24);
 }
 
 .glass-effect-strong-blur {
-  background: linear-gradient(135deg, rgba(92, 116, 163, 0.14), rgba(92, 116, 163, 0.07));
+  background: linear-gradient(135deg, rgba(83, 104, 147, 0.14), rgba(83, 104, 147, 0.07));
   backdrop-filter: blur(4px);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .footer-wrapper {
-  background: rgba(92, 116, 163, 0.05);
+  background: rgba(83, 104, 147, 0.05);
   backdrop-filter: blur(4px);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }

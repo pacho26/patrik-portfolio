@@ -36,7 +36,7 @@ const variantClass = computed(() => {
     case 'primary':
       return 'bg-yellow-700 border-yellow-700 text-white hover:bg-yellow-800 hover:border-yellow-800'
     case 'secondary':
-      return 'bg-transparent backdrop-blur-xs text-yellow-600 border-yellow-600 hover:bg-yellow-700 hover:border-yellow-700 hover:text-white'
+      return 'bg-transparent text-yellow-600 border-yellow-600 hover:bg-yellow-700 hover:border-yellow-700 hover:text-white'
     default:
       return ''
   }

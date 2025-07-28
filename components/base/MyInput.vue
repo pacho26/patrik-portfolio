@@ -9,7 +9,7 @@ interface Props {
   textarea?: boolean
 }
 
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
   rows: 5,
 })
 
@@ -19,7 +19,7 @@ const emit = defineEmits<{
 
 const inputClass = computed(() => [
   'w-full rounded  transition-all duration-300',
-  'bg-dark-glass backdrop-blur-sm text-white placeholder-grey-400',
+  'bg-[#00000055] backdrop-blur-sm text-white placeholder-grey-400',
   'focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent',
   'px-4 py-3 text-base',
 ])
