@@ -2,6 +2,23 @@
 const route = useRoute()
 
 const isHomepage = computed(() => route.path === '/')
+
+const isScrollButtonVisible = ref(false)
+
+const setScrollVisibility = () => {
+  isScrollButtonVisible.value = window.scrollY > 1
+}
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', setScrollVisibility)
+})
+onUnmounted(() => {
+  window.removeEventListener('scroll', setScrollVisibility)
+})
 </script>
 
 <template>
@@ -21,9 +38,17 @@ const isHomepage = computed(() => route.path === '/')
         </main>
       </div>
 
-      <!-- TODO: Add go to top button? -->
-      <!-- <MyButton variant="secondary" class="fixed right-8 bottom-8 z-10">Resume</MyButton> -->
+      <Transition name="scroll-button">
+        <MyButton
+          v-show="isScrollButtonVisible"
+          class="fixed right-5 bottom-5 lg:right-8 lg:bottom-8 rounded-full w-8 h-[42px] z-20 flex items-center justify-center"
+          @click="scrollToTop"
+        >
+          <Icon name="uil:arrow-up" size="28px" class="relative z-10 text-white translate-y-0.5" />
+        </MyButton>
+      </Transition>
     </div>
+
     <footer class="footer-wrapper mt-10 sm:mt-12 flex justify-center py-3">
       <p class="flex items-center gap-2">
         Made with

@@ -42,7 +42,11 @@ const variantClass = computed(() => {
   }
 })
 
-const buttonClasses = computed(() => [sizeClass.value, variantClass.value])
+const buttonClasses = computed(() => [
+  sizeClass.value,
+  variantClass.value,
+  { relative: props.loading },
+])
 </script>
 
 <template>
@@ -59,7 +63,7 @@ const buttonClasses = computed(() => [sizeClass.value, variantClass.value])
     v-else
     type="button"
     :disabled="loading"
-    class="relative border-1 rounded cursor-pointer transition-all duration-300 font-medium tracking-widest text-center"
+    class="border-1 rounded cursor-pointer transition-all duration-300 font-medium tracking-widest text-center"
     :class="buttonClasses"
   >
     <div v-if="loading" class="absolute inset-0 flex items-center justify-center">
