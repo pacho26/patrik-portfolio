@@ -13,7 +13,8 @@ useHead({
 
 <template>
   <div>
-    <MyHeading :level="1" class="font-display font-bold"
+    <ProfileCard class="block lg:hidden" />
+    <MyHeading :level="1" class="mt-10 font-display font-bold"
       >Shaping the Web with <span class="text-yellow-600">Passion</span></MyHeading
     >
   </div>

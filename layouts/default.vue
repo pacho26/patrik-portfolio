@@ -1,8 +1,4 @@
 <script lang="ts" setup>
-const route = useRoute()
-
-const isHomepage = computed(() => route.path === '/')
-
 const isScrollButtonVisible = ref(false)
 
 const setScrollVisibility = () => {
@@ -27,8 +23,7 @@ onUnmounted(() => {
       <Header />
       <div class="mt-12 md:mt-20 flex flex-col items-start lg:flex-row gap-10 lg:gap-20 z-30">
         <div
-          class="flex flex-col justify-between gap-8 sm:flex-row w-full lg:w-[301px] min-w-[301px] static sm:sticky sm:top-10"
-          :class="{ 'hidden lg:block': !isHomepage }"
+          class="hidden static sm:sticky sm:top-10 lg:flex flex-col sm:flex-row justify-between gap-8 w-full lg:w-[301px] min-w-[301px]"
         >
           <ProfileCard class="w-full" />
         </div>
