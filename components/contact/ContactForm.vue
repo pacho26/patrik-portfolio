@@ -95,6 +95,7 @@ const handleSubmit = async () => {
           label="Email *"
           placeholder="example@example.com"
           :error="errors.email"
+          autocapitalize="off"
         />
 
         <MyInput

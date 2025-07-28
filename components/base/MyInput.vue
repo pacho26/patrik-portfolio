@@ -1,17 +1,20 @@
 <script lang="ts" setup>
-interface Props {
-  modelValue: string
-  label: string
-  placeholder?: string
-  error?: string
-  rows?: number
-  id?: string
-  textarea?: boolean
-}
-
-withDefaults(defineProps<Props>(), {
-  rows: 5,
-})
+const props = withDefaults(
+  defineProps<{
+    modelValue: string
+    label: string
+    placeholder?: string
+    error?: string
+    rows?: number
+    id?: string
+    textarea?: boolean
+    // Allow additional HTML attributes
+    [key: string]: any
+  }>(),
+  {
+    rows: 5,
+  }
+)
 
 const emit = defineEmits<{
   'update:modelValue': [value: string]
@@ -28,6 +31,12 @@ const handleInput = (event: Event) => {
   const target = event.target as HTMLInputElement | HTMLTextAreaElement
   emit('update:modelValue', target.value)
 }
+
+// Extract props that should be passed to the input/textarea
+const inputProps = computed(() => {
+  const { modelValue, label, placeholder, error, rows, id, textarea, ...rest } = props
+  return rest
+})
 </script>
 
 <template>
@@ -44,6 +53,7 @@ const handleInput = (event: Event) => {
       :rows="rows"
       class="resize-none"
       :class="[inputClass]"
+      v-bind="inputProps"
       @input="handleInput"
     ></textarea>
 
@@ -53,6 +63,7 @@ const handleInput = (event: Event) => {
       :value="modelValue"
       :placeholder="placeholder"
       :class="[inputClass]"
+      v-bind="inputProps"
       @input="handleInput"
     />
 
