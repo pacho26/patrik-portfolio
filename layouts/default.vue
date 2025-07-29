@@ -45,13 +45,13 @@ onUnmounted(() => {
     </div>
 
     <footer class="footer-wrapper mt-10 sm:mt-12 flex justify-center py-3">
-      <p class="flex items-center gap-2">
-        Made with
-        <span>
-          <Icon name="mdi:heart" size="24px" class="text-yellow-600 translate-y-0.25" />
-        </span>
-        by <span class="font-bold">Patrik Slovic</span>
-      </p>
+      <div class="flex items-center justify-center gap-1.5">
+        <p class="flex items-center gap-2">
+          Made by<span class="font-bold text-yellow-600">Patrik Slovic</span>
+        </p>
+        <p>|</p>
+        <MyLink href="https://github.com/pacho26/patrik-portfolio" new-tab>Source code</MyLink>
+      </div>
     </footer>
   </div>
 </template>
