@@ -1,48 +1,75 @@
 <script lang="ts" setup>
+const REMINDER_TIMEOUT = 7000
+const SHAKE_DURATION = 600
+
 const { isTouchDevice } = useTouchDevice()
 
-const isRotated = ref(false)
+const hasFlippedBefore = ref(false)
+const isFlipped = ref(false)
+const isShaking = ref(false)
+
+const markAsFlipped = () => {
+  hasFlippedBefore.value = true
+}
+
+const shakeImage = () => {
+  isShaking.value = true
+  setTimeout(() => {
+    isShaking.value = false
+  }, SHAKE_DURATION)
+}
 
 const rotation = {
   toggle() {
-    if (isTouchDevice.value) {
-      isRotated.value = !isRotated.value
-    }
+    isFlipped.value = !isFlipped.value
+    markAsFlipped()
   },
 
   onMouseEnter() {
-    if (!isTouchDevice.value) {
-      isRotated.value = true
-    }
+    if (isTouchDevice.value) return
+    isFlipped.value = true
+    markAsFlipped()
   },
 
   onMouseLeave() {
-    if (!isTouchDevice.value) {
-      isRotated.value = false
-    }
+    if (isTouchDevice.value) return
+    isFlipped.value = false
   },
+
+  onClick: markAsFlipped,
 }
+
+onMounted(() => {
+  setTimeout(() => {
+    if (!hasFlippedBefore.value) {
+      shakeImage()
+    }
+  }, REMINDER_TIMEOUT)
+})
 </script>
 
 <template>
   <div
-    class="relative w-[200px] h-[200px] cursor-pointer rounded-full perspective-1000 profile-image-container"
-    @click="rotation.toggle"
+    class="relative w-[200px] h-[200px] cursor-pointer rounded-full perspective-1000 profile-image-container select-none"
+    @click="rotation.onClick"
+    @touchstart.passive="rotation.toggle"
     @mouseenter="rotation.onMouseEnter"
     @mouseleave="rotation.onMouseLeave"
-    :class="{ group: !isTouchDevice }"
+    :class="{
+      group: !isTouchDevice,
+      'animate-shake': isShaking,
+    }"
   >
-    <!-- TODO: Add some kind of absolute label that will say that image is hoverable/clickable -->
     <div
-      class="relative w-full h-full rounded-full transition-transform duration-700 transform-3d border-4 border-yellow-600 profile-image"
+      class="relative w-full h-full rounded-full duration-700 transform-3d border-4 border-yellow-600 profile-image"
       :class="{
-        'rotate-y-180': isRotated,
+        'rotate-y-180': isFlipped,
         'group-hover:rotate-y-180': !isTouchDevice,
       }"
     >
       <NuxtImg
         src="img/profile-illustration.webp"
-        alt="Profile - animated"
+        alt="Profile image - animated"
         width="192"
         height="192"
         sizes="200px"
@@ -54,7 +81,7 @@ const rotation = {
       />
       <NuxtImg
         src="img/profile-real.webp"
-        alt="Profile - real life"
+        alt="Profile image - real life"
         width="192"
         height="192"
         sizes="200px"
