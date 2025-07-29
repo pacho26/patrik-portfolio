@@ -24,7 +24,7 @@ const companyLogoAlt = computed(() => `${props.job.company.name} logo`)
         />
         <MyLink
           v-if="job.company.url"
-          :to="job.company.url"
+          :href="job.company.url"
           target="_blank"
           rel="noopener noreferrer"
         >

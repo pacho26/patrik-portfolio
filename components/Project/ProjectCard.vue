@@ -24,7 +24,7 @@ const imgAlt = computed(() => `${props.project.name} preview`)
       class="aspect-3/2 object-cover w-full h-auto transition-all duration-300 sm:w-[300px] lg:grayscale-100 lg:group-hover:grayscale-0 lg:group-focus:grayscale-0"
     />
     <div
-      class="absolute hidden lg:block sm:w-[300px] aspect-3/2 bg-yellow-500/5 group-hover:opacity-0 transition-all duration-300"
+      class="absolute hidden lg:block sm:w-[300px] aspect-3/2 bg-yellow-600/5 group-hover:opacity-0 transition-all duration-300"
     ></div>
 
     <div class="p-4 md:p-8 sm:min-h-[220px] md:min-h-[200px]">
