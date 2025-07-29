@@ -19,7 +19,9 @@ onUnmounted(() => {
 
 <template>
   <div>
-    <div class="max-w-[1140px] m-auto pt-5 px-5 pb-20 md:pt-8 min-h-[calc(100vh-102px)]">
+    <div
+      class="max-w-[1140px] m-auto pt-5 px-5 pb-20 md:pt-8 min-h-[calc(100vh-96px)] sm:min-h-[calc(100vh-110px)]"
+    >
       <Header />
       <div class="mt-12 md:mt-20 flex flex-col items-start lg:flex-row gap-10 lg:gap-20 z-30">
         <div
@@ -44,13 +46,18 @@ onUnmounted(() => {
       </Transition>
     </div>
 
-    <footer class="footer-wrapper mt-10 sm:mt-12 flex justify-center py-3">
-      <div class="flex items-center justify-center gap-1.5">
+    <footer class="footer-wrapper mt-10 sm:mt-12 flex justify-center py-4">
+      <div class="flex items-center justify-center gap-1.5 text-sm sm:text-base">
         <p class="flex items-center gap-2">
           Made by<span class="font-bold text-yellow-600">Patrik Slovic</span>
         </p>
         <p>|</p>
-        <MyLink href="https://github.com/pacho26/patrik-portfolio" new-tab>Source code</MyLink>
+        <MyLink
+          href="https://github.com/pacho26/patrik-portfolio"
+          new-tab
+          custom-class="!text-xs sm:!text-sm"
+          >Source code</MyLink
+        >
       </div>
     </footer>
   </div>

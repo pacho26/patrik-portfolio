@@ -34,7 +34,7 @@ const rotation = {
   >
     <!-- TODO: Add some kind of absolute label that will say that image is hoverable/clickable -->
     <div
-      class="relative w-full h-full rounded-full transition-transform duration-700 transform-3d border-4 profile-image"
+      class="relative w-full h-full rounded-full transition-transform duration-700 transform-3d border-4 border-yellow-600 profile-image"
       :class="{
         'rotate-y-180': isRotated,
         'group-hover:rotate-y-180': !isTouchDevice,
