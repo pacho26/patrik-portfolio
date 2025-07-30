@@ -23,7 +23,7 @@ const sizeClass = computed(() => {
     case 'sm':
       return 'px-3 py-1.5 text-xs'
     case 'md':
-      return 'px-5 py-2.5 text-sm'
+      return 'px-5 py-3 text-sm'
     case 'lg':
       return 'px-7 py-3.5 text-base'
     default:
