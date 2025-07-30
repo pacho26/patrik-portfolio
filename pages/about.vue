@@ -14,13 +14,12 @@ useHead({
 <template>
   <div>
     <MyHeading :level="1" class="font-display font-bold">About</MyHeading>
-    <div>
-      <!-- TODO: Languages should be here. Just as some other texts. On homepage is only crucial data -->
+    <div class="mt-8 sm:mt-16">
       <!--  I'm a web developer specializing in Vue, with a passion for clean, maintainable code.
           Persistent and easygoing, I enjoy creating a positive atmosphere while tackling
           challenges. Outside of tech, I've spent nearly a decade performing at various events as a
           musician. -->
-      <!-- <HomepageLanguages class="glass-effect p-4 rounded-lg" /> -->
+      <AboutLanguages class="glass-effect p-4 rounded-lg" />
     </div>
   </div>
 </template>

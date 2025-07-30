@@ -26,7 +26,5 @@ useHead({
         :project
       />
     </div>
-
-    <!-- TODO: Add achievements (mc2) section, maybe here or somewhere else -->
   </div>
 </template>

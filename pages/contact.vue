@@ -16,7 +16,6 @@ useHead({
     <MyHeading :level="1" class="font-display font-bold"
       >Let’s Create Something <span class="text-yellow-600">Amazing</span></MyHeading
     >
-
     <ContactForm class="mt-8 md:mt-16" />
   </div>
 </template>
