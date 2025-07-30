@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const REMINDER_TIMEOUT = 10000
+const REMINDER_TIMEOUT = 8000
 const SHAKE_DURATION = 600
 
 const { isTouchDevice } = useTouchDevice()

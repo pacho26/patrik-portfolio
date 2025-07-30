@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { projects, experiences } from '~/assets/ts'
-
 useHead({
   title: 'Patrik Slovic | Frontend Developer',
   meta: [
@@ -24,8 +22,13 @@ useHead({
       emphasis on clean, maintainable code.
     </p>
 
+    <section class="mt-8 lg:mt-16">
+      <MyHeading :level="4" as="h2" class="mb-4 lg:mb-6 font-bold">Technical Strengths</MyHeading>
+      <HomepageTechList />
+    </section>
+
     <section
-      class="mt-12 text-center space-y-6 bg-gradient-to-r from-yellow-600/10 to-orange-600/10 p-8 rounded-lg"
+      class="mt-8 lg:mt-16 text-center space-y-6 bg-gradient-to-r from-yellow-600/10 to-orange-600/10 backdrop-blur-[1px] p-8 rounded-lg"
     >
       <MyHeading :level="2" as="h2" class="font-bold">Ready to Work Together?</MyHeading>
       <p class="text-grey-200 max-w-xl mx-auto">
@@ -37,7 +40,5 @@ useHead({
         <MyButton to="/projects" variant="secondary" size="lg">View My Projects</MyButton>
       </div>
     </section>
-
-    <!-- <MyButton to="/projects" variant="secondary">Learn More About Me</MyButton> -->
   </div>
 </template>
