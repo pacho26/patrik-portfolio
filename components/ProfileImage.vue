@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const REMINDER_TIMEOUT = 7000
+const REMINDER_TIMEOUT = 10000
 const SHAKE_DURATION = 600
 
 const { isTouchDevice } = useTouchDevice()
@@ -61,7 +61,7 @@ onMounted(() => {
     }"
   >
     <div
-      class="relative w-full h-full rounded-full duration-700 transform-3d border-4 border-yellow-600 profile-image"
+      class="relative w-full h-full rounded-full duration-700 transform-3d border-4 profile-image"
       :class="{
         'rotate-y-180': isFlipped,
         'group-hover:rotate-y-180': !isTouchDevice,
