@@ -16,13 +16,13 @@ useHead({
     <MyHeading :level="1" class="font-display font-bold"
       >Here’s A Bit More About <span class="text-yellow-600">Me</span></MyHeading
     >
-    <div class="mt-8 sm:mt-12">
+    <div class="mt-8 sm:mt-12 space-y-8 md:space-y-12">
       <section>
         <MyHeading as="h2" :level="4" class="font-500">Education</MyHeading>
         <AboutEducation class="mt-4 p-4 glass-effect rounded-lg" />
       </section>
 
-      <section class="mt-8 sm:mt-12 text-grey-200 space-y-4">
+      <section class="text-grey-200 space-y-4">
         <p>
           I consider myself a relaxed and approachable individual who enjoys bringing humor into the
           workplace. Persistence is one of my greatest strengths; when I set a goal, I don't quit
@@ -43,7 +43,10 @@ useHead({
         </p>
       </section>
 
-      <AboutLanguages class="mt-8 sm:mt-12 p-4 glass-effect rounded-lg" />
+      <div class="flex flex-col gap-8 md:flex-row">
+        <AboutLanguages class="p-4 glass-effect rounded-lg" />
+        <AboutQuoteOfTheDay />
+      </div>
     </div>
   </div>
 </template>
