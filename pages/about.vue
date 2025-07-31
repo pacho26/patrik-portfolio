@@ -45,7 +45,7 @@ useHead({
 
       <div class="flex flex-col gap-8 md:flex-row">
         <AboutLanguages class="p-4 glass-effect rounded-lg" />
-        <AboutQuoteOfTheDay />
+        <AboutQuote />
       </div>
     </div>
   </div>
