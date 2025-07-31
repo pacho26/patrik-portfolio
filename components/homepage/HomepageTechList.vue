@@ -44,12 +44,14 @@ const techList = [
         :href="tech.url"
         target="_blank"
         rel="noopener noreferrer"
-        class="flex flex-col items-center justify-center text-center aspect-square"
+        class="flex flex-col items-center justify-center text-center aspect-square w-[98px] h-[98px]"
       >
         <div class="w-10 h-10 flex items-center justify-center">
           <NuxtImg
             :src="tech.logo"
             :alt="`${tech.name} logo`"
+            width="40"
+            height="40"
             class="w-full h-full object-contain pointer-events-none select-none"
           />
         </div>

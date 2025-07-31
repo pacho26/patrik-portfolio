@@ -24,7 +24,7 @@ const educationItems = [
           <p class="font-medium text-sm text-gray-600 dark:text-gray-400">{{ item.institution }}</p>
         </div>
         <div class="flex justify-center w-10 h-10">
-          <NuxtImg :src="item.logo" />
+          <NuxtImg :src="item.logo" :alt="item.institution" width="40" height="40" />
         </div>
       </div>
       <p class="text-xs text-gray-500 dark:text-gray-500">{{ item.year }}</p>
