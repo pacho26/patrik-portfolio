@@ -20,7 +20,6 @@ const companyLogoAlt = computed(() => `${props.job.company.name} logo`)
           width="20"
           height="20"
           sizes="20px"
-          loading="lazy"
           class="w-5 h-5"
         />
         <MyLink
@@ -39,7 +38,7 @@ const companyLogoAlt = computed(() => `${props.job.company.name} logo`)
         </li>
       </ul>
 
-      <TechList :items="job.technologies" class="mt-4" />
+      <TechList :items="job.technologies" class="mt-4 max-w-[85vw]" />
     </div>
   </div>
 </template>

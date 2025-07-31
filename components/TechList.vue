@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <ul class="flex gap-x-2 gap-y-2 flex-wrap">
+  <ul class="flex gap-2 flex-wrap">
     <TechListItem v-for="(item, index) in items" :key="index" :label="item" />
   </ul>
 </template>
