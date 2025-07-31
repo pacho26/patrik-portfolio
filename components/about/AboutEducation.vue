@@ -4,7 +4,7 @@ const educationItems = [
     degree: 'Bachelor of Computer Science',
     institution: 'Zagreb University of Applied Sciences',
     year: '2019 - 2022',
-    logo: '/img/education/tvz.svg',
+    logo: '/img/education/tvz.webp',
   },
   {
     degree: 'Mathematics Gymnasium Diploma',
