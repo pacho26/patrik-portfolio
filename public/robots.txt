@@ -1,2 +1,4 @@
 User-Agent: *
 Disallow:
+
+Sitemap: https://pa3k.dev/sitemap.xml
