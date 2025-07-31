@@ -40,10 +40,10 @@ const isExternalLink = computed(() => {
       v-bind="linkAttrs"
     >
       <div
-        class="absolute top-1/2 left-1/2 w-0 h-0 bg-yellow-600 rounded-lg opacity-0 transition-all duration-300 ease-out transform -translate-x-1/2 -translate-y-1/2 group-hover/link:w-full group-hover/link:h-full group-hover/link:opacity-100"
+        class="absolute top-1/2 left-1/2 w-0 h-0 bg-yellow-600 rounded-lg opacity-0 transition-all duration-300 ease-out transform -translate-x-1/2 -translate-y-1/2 group-hover/link:w-full group-hover/link:h-full group-hover/link:opacity-100 text-white"
         :class="{ 'w-full h-full opacity-100': isActive }"
       />
-      <Icon :name="icon" :size class="relative z-10 !text-white" />
+      <Icon :name="icon" :size class="relative z-10 text-white" />
     </NuxtLink>
 
     <a
@@ -53,10 +53,10 @@ const isExternalLink = computed(() => {
       v-bind="linkAttrs"
     >
       <div
-        class="absolute top-1/2 left-1/2 w-0 h-0 bg-yellow-600 rounded-lg opacity-0 transition-all duration-300 ease-out transform -translate-x-1/2 -translate-y-1/2 group-hover/link:w-full group-hover/link:h-full group-hover/link:opacity-100"
+        class="absolute top-1/2 left-1/2 w-0 h-0 bg-yellow-600 rounded-lg opacity-0 transition-all duration-300 ease-out transform -translate-x-1/2 -translate-y-1/2 group-hover/link:w-full group-hover/link:h-full group-hover/link:opacity-100 text-white"
         :class="{ 'w-full h-full opacity-100': isActive }"
       />
-      <Icon :name="icon" :size class="relative z-10 !text-white" />
+      <Icon :name="icon" :size class="relative z-10 text-white" />
     </a>
 
     <div
