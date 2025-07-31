@@ -8,21 +8,21 @@
     <p class="text-grey-200 mt-2">Zagreb, Croatia</p>
     <div class="mt-4 flex gap-2.5">
       <MyIconLink
-        to="https://www.linkedin.com/in/patrik-slovic/"
+        href="https://www.linkedin.com/in/patrik-slovic/"
         icon="uil:linkedin"
         label="LinkedIn"
         size="28px"
         new-tab
       ></MyIconLink>
       <MyIconLink
-        to="https://github.com/pacho26"
+        href="https://github.com/pacho26"
         icon="uil:github"
         label="GitHub"
         size="28px"
         new-tab
       ></MyIconLink>
       <MyIconLink
-        to="mailto:patrikslovic@gmail.com"
+        href="mailto:patrikslovic@gmail.com"
         icon="uil:envelope"
         label="Email"
         size="28px"
