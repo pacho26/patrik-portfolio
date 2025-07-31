@@ -10,7 +10,7 @@ const companyLogoAlt = computed(() => `${props.job.company.name} logo`)
 
 <template>
   <div class="max-w-[800px] flex flex-col items-start gap-1 md:flex-row md:gap-12">
-    <p class="uppercase text-sm text-grey-400 text-nowrap md:leading8">{{ job.period }}</p>
+    <p class="uppercase text-sm text-grey-400 text-nowrap md:leading-8">{{ job.period }}</p>
     <div>
       <MyHeading :level="4" as="h2" class="font-medium leading-8">{{ job.role }}</MyHeading>
       <div class="mt-2 flex items-center gap-2">
@@ -21,6 +21,7 @@ const companyLogoAlt = computed(() => `${props.job.company.name} logo`)
           height="20"
           sizes="20px"
           loading="lazy"
+          class="w-5 h-5"
         />
         <MyLink
           v-if="job.company.url"
@@ -38,7 +39,7 @@ const companyLogoAlt = computed(() => `${props.job.company.name} logo`)
         </li>
       </ul>
 
-      <TechList :items="job.technologies" class="mt-5 md:mt-4" />
+      <TechList :items="job.technologies" class="mt-4" />
     </div>
   </div>
 </template>
