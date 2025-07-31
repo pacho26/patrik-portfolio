@@ -16,7 +16,7 @@ const educationItems = [
 </script>
 
 <template>
-  <div class="flex flex-col gap-6">
+  <section class="flex flex-col gap-6">
     <div v-for="item in educationItems" :key="item.degree">
       <div class="flex justify-between gap-8">
         <div>
@@ -29,5 +29,5 @@ const educationItems = [
       </div>
       <p class="text-xs text-gray-500 dark:text-gray-500">{{ item.year }}</p>
     </div>
-  </div>
+  </section>
 </template>

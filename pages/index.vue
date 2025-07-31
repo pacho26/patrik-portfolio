@@ -17,7 +17,7 @@ useHead({
     <MyHeading :level="1" class="font-display font-bold"
       >Shaping the Web with <span class="text-yellow-600">Passion</span></MyHeading
     >
-    <p class="mt-8 lg:mt-16 text-xl text-grey-200 leading-8">
+    <p class="mt-8 lg:mt-16 text-xl text-grey-100 leading-8">
       I'm a <span class="border-b-3 border-yellow-600">frontend developer</span> dedicated to
       crafting modern, interactive web applications, with a strong emphasis on clean, maintainable
       code.
