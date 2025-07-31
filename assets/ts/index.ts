@@ -220,7 +220,7 @@ export const experiences: ExperienceModel[] = [
     role: 'Junior Frontend Developer',
     location: 'Zaprešić, Croatia',
     descriptionList: [
-      'Maintained and implemented new features for the biggest e-commerce platform for pharmacies in Germany',
+      'Maintained and implemented new features for the largest e-commerce platform for pharmacies in Germany',
       'Worked on a Vaccine Reservation System, crucial during the COVID-19 pandemic',
       'Built a component library alongside Storybook for testing and documenting components, ensuring both visual and functional accuracy',
       'Built an API library using TypeScript for use across projects',

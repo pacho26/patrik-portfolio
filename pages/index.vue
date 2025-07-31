@@ -24,7 +24,7 @@ useHead({
     </p>
 
     <section class="mt-8 lg:mt-16">
-      <MyHeading :level="4" as="h2" class="mb-4 lg:mb-6 font-bold">Technical Strengths</MyHeading>
+      <MyHeading :level="4" as="h2" class="mb-4 lg:mb-6 font-medium">Tech Expertise</MyHeading>
       <HomepageTechList />
     </section>
 
@@ -38,7 +38,7 @@ useHead({
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <MyButton to="/contact" size="lg">Start a Conversation</MyButton>
-        <MyButton to="/projects" variant="secondary" size="lg">View My Projects</MyButton>
+        <MyButton to="/projects" variant="secondary" size="lg">Explore My Projects</MyButton>
       </div>
     </section>
   </div>
