@@ -18,8 +18,6 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('mousemove', updatePosition)
 })
-// TODO: Icons disappear on mobile occasionally (both responsive mobile on desktop and actual mobile device)
-// TODO: Change favicon
 </script>
 
 <template>
