@@ -33,7 +33,7 @@ const hasVerticalImages = computed(() => props.project.imagesOrientation === 've
         <div class="flex items-center gap-3" v-for="link in project.links" :key="link.url">
           <Icon :name="`uil:${link.icon}`" size="24px" />
           <MyLink :href="link.url" new-tab>
-            <p class="text-base">{{ link.label }}</p>
+            <p>{{ link.label }}</p>
           </MyLink>
         </div>
       </div>
