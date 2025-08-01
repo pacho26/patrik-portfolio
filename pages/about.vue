@@ -24,9 +24,9 @@ useHead({
 
       <section class="text-grey-200 space-y-4">
         <p>
-          I consider myself a relaxed and approachable individual who enjoys bringing humor into the
-          workplace. Persistence is one of my greatest strengths; when I set a goal, I don't quit
-          until it's reached.
+          I consider myself a relaxed and approachable individual who enjoys contributing to a
+          positive and supportive work environment. One of my key strengths is persistence—when I
+          set a goal, I stay committed until I achieve it.
         </p>
         <p>
           I'm continuously learning new things and working on new projects. Currently, I'm focused

@@ -30,6 +30,9 @@ const companyLogoAlt = computed(() => `${props.job.company.name} logo`)
         >
           {{ job.company.name }}
         </MyLink>
+        <span class="ml-2 px-2 py-0.5 rounded bg-yellow-700 text-xs">
+          {{ job.employmentType }}
+        </span>
       </div>
 
       <ul class="mt-4 ml-4 list-disc flex flex-col gap-2 text-grey-200 md:ml-0">

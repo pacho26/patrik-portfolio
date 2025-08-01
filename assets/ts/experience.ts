@@ -4,6 +4,8 @@ type Company = {
   url: string
 }
 
+type EmploymentType = 'Full-time' | 'Part-time' | 'Freelance' | 'Internship'
+
 export type ExperienceModel = {
   company: Company
   role: string
@@ -11,6 +13,7 @@ export type ExperienceModel = {
   descriptionList: string[]
   technologies: string[]
   period: string
+  employmentType: EmploymentType
 }
 
 export const experiences: ExperienceModel[] = [
@@ -31,6 +34,7 @@ export const experiences: ExperienceModel[] = [
     ],
     technologies: ['Vue', 'Nuxt', 'TypeScript', 'UnoCSS', 'Storybook', 'Strapi'],
     period: 'Oct 2022 — Present',
+    employmentType: 'Full-time',
   },
   {
     company: {
@@ -48,5 +52,6 @@ export const experiences: ExperienceModel[] = [
     ],
     technologies: ['Vue', 'TypeScript', 'UnoCSS', 'Storybook'],
     period: 'Dec 2021 — Sep 2022',
+    employmentType: 'Full-time',
   },
 ]
