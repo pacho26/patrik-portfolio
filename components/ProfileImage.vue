@@ -72,10 +72,9 @@ onMounted(() => {
         alt="Profile image - animated"
         width="192"
         height="192"
-        sizes="200px"
+        sizes="192px"
         preset="profile"
         class="rounded-full absolute w-full inset-0 backface-hidden"
-        priority
         loading="eager"
         fetchpriority="high"
       />
@@ -84,7 +83,7 @@ onMounted(() => {
         alt="Profile image - real life"
         width="192"
         height="192"
-        sizes="200px"
+        sizes="192px"
         preset="profile"
         class="rounded-full absolute w-full inset-0 backface-hidden rotate-y-180"
         loading="lazy"

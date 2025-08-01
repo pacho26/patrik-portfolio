@@ -57,7 +57,7 @@ export default defineNuxtConfig({
       profile: {
         modifiers: {
           format: 'webp',
-          quality: 85,
+          quality: 80,
           width: 192,
           height: 192,
         },
