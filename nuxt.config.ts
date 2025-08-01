@@ -11,7 +11,7 @@ export default defineNuxtConfig({
         {
           name: 'description',
           content:
-            'Patrik Slovic - Frontend developer specializing in Vue.js development with clean, maintainable code.',
+            'Patrik Slovic - Web developer specializing in Vue.js development with clean, maintainable code.',
         },
       ],
       link: [

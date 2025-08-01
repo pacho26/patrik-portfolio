@@ -18,7 +18,7 @@ useHead({
       >Shaping the Web with <span class="text-yellow-600">Passion</span></MyHeading
     >
     <p class="mt-8 lg:mt-16 text-xl text-grey-100 leading-8">
-      I'm a <span class="font-medium text-yellow-600">frontend developer</span> dedicated to
+      I'm a <span class="font-medium text-yellow-600">web developer</span> dedicated to
       crafting modern, interactive web applications, with a strong emphasis on clean, maintainable
       code.
     </p>
