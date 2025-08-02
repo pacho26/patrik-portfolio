@@ -11,7 +11,7 @@ export type ImageModel = {
   title: string
 }
 
-type ImageOrientationModel = 'horizonal' | 'vertical'
+type ImagePresentationMode = 'desktop' | 'mobile'
 
 export type ProjectModel = {
   name: string
@@ -21,7 +21,7 @@ export type ProjectModel = {
   technologies: string[]
   previewImg: string
   images: ImageModel[]
-  imagesOrientation?: ImageOrientationModel
+  imagePresentationMode?: ImagePresentationMode
   slug: string
   links?: LinkModel[]
 }
@@ -115,7 +115,7 @@ export const projects: ProjectModel[] = [
         title: 'Winning Celebration',
       },
     ],
-    imagesOrientation: 'vertical',
+    imagePresentationMode: 'mobile',
     slug: 'alias',
     links: [
       {

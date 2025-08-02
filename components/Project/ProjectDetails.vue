@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import { projects, type ProjectModel } from '~/assets/ts'
-import ProjectCarouselHorizontal from './ProjectCarouselHorizontal.vue'
+import { type ProjectModel } from '~/assets/ts'
+import ProjectCarouselDesktop from './ProjectCarouselDesktop.vue'
 
 const props = defineProps<{
   project: ProjectModel
 }>()
 
-const hasVerticalImages = computed(() => props.project.imagesOrientation === 'vertical')
+const hasMobileImages = computed(() => props.project.imagePresentationMode === 'mobile')
 </script>
 
 <template>
@@ -41,8 +41,8 @@ const hasVerticalImages = computed(() => props.project.imagesOrientation === 've
 
     <div class="mt-8 sm:mt-12">
       <MyHeading :level="4" as="h3" class="mb-4 font-display font-medium">Gallery</MyHeading>
-      <ProjectCarouselVertical v-if="hasVerticalImages" :images="project.images" />
-      <ProjectCarouselHorizontal v-else :images="project.images" />
+      <ProjectCarouselMobile v-if="hasMobileImages" :images="project.images" />
+      <ProjectCarouselDesktop v-else :images="project.images" />
     </div>
   </div>
 </template>
