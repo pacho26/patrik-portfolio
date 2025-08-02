@@ -38,7 +38,7 @@ const techList = [
     <div
       v-for="tech in techList"
       :key="tech.name"
-      class="bg-gradient-to-br backdrop-blur-[1px] from-yellow-500/10 to-orange-500/10 rounded-lg border border-yellow-600/10 hover:border-yellow-600/40 transition-all duration-300 hover:scale-102"
+      class="bg-gradient-to-br backdrop-blur-[1px] from-yellow-500/10 to-orange-500/10 rounded border border-yellow-600/10 hover:border-yellow-600/40 transition-all duration-300 hover:scale-102"
     >
       <NuxtLink
         :href="tech.url"

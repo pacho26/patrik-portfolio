@@ -5,7 +5,7 @@ const quote = getQuoteOfTheDay()
 </script>
 
 <template>
-  <section class="glass-effect rounded-xl p-6">
+  <section class="glass-effect rounded p-6">
     <div class="text-center flex flex-col justify-center h-full">
       <div class="mb-4">
         <svg class="w-8 h-8 mx-auto text-yellow-600" fill="currentColor" viewBox="0 0 24 24">

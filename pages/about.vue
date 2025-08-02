@@ -19,7 +19,7 @@ useHead({
     <div class="mt-8 sm:mt-12 space-y-8 md:space-y-12">
       <section>
         <MyHeading as="h2" :level="4" class="font-500">Education</MyHeading>
-        <AboutEducation class="mt-4 p-4 glass-effect rounded-lg" />
+        <AboutEducation class="mt-4 p-4 glass-effect rounded" />
       </section>
 
       <section class="text-grey-200 space-y-4">
@@ -44,7 +44,7 @@ useHead({
       </section>
 
       <div class="flex flex-col gap-8 md:flex-row">
-        <AboutLanguages class="p-4 glass-effect rounded-lg" />
+        <AboutLanguages class="p-4 glass-effect rounded" />
         <AboutQuote />
       </div>
     </div>
