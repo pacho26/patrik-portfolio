@@ -5,7 +5,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Patrik Slovic - Frontend Developer specializing in Vue.js. Clean, maintainable code with a passion for web development and music performance.',
+        'Patrik Slovic - Frontend Developer specializing in Vue.js. I write clean, maintainable code and have a passion for both web development and music performance.',
     },
   ],
 })
@@ -18,7 +18,7 @@ useHead({
       >Shaping the Web with <span class="text-yellow-600">Passion</span></MyHeading
     >
     <p class="mt-8 lg:mt-16 text-xl text-grey-100 leading-8">
-      I'm a <span class="font-medium text-yellow-600">web developer</span> dedicated to crafting
+      I'm a <span class="font-medium text-yellow-600">frontend developer</span> dedicated to crafting
       modern, interactive web applications, with a strong emphasis on clean, maintainable code.
     </p>
 
