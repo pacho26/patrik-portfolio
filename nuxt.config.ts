@@ -35,7 +35,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/icon',
     '@nuxt/fonts',
-    '@vesp/nuxt-fontawesome',
     'vue3-carousel-nuxt',
   ],
   css: ['~/assets/css/main.css'],
