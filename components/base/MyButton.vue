@@ -9,7 +9,6 @@ const props = withDefaults(
     size?: ButtonSize
     variant?: ButtonVariant
     to?: NuxtLinkProps['to']
-    block?: boolean
     loading?: boolean
   }>(),
   {
